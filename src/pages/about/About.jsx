@@ -54,8 +54,8 @@ const About = () => {
     <div className="about">
       <div className="abt-part1">
         <div className="box">
-          <div className="img">
-            <div className="img2"></div>
+          <div className="img" style={{backgroundImage:"url('ajitkatiyar.jpg')"}}>
+            <div className="img2" style={{backgroundImage:"url('mask.jpg')"}}></div>
           </div>
           <div className="details">
             <h3>ABOUT ME</h3>
