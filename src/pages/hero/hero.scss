@@ -1,0 +1,193 @@
+$primary: rgb(209, 88, 2);
+$font-main: 'Syne', sans-serif;
+
+.thumb {
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  height:  92vh;
+  overflow: hidden;
+  background-image: url("ajitkatiyar.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  padding-top: 8vh;
+  z-index: 0;
+  
+
+  .box {
+    width: 35px;
+    height: 35px;
+    transition: border-color 1s ease;
+    border: 1.5px solid rgba(46, 45, 45, 0.077);
+    z-index: 3;
+  }
+
+  .glow {
+    border: 1.5px solid $primary;
+  }
+
+  .name {
+    position: absolute;
+    bottom: 45%;
+    left: 17%;
+    transform: translateX(-50%);
+    color: $primary;
+    font-size: 1.5vw;
+    font-family: $font-main;
+    letter-spacing: 2px;
+    z-index: 4;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 25%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4.8vw;
+    font-family: $font-main;
+    letter-spacing: 2px;
+    z-index: 4;
+
+    span {
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+    }
+  }
+
+  .description {
+    position: absolute;
+    bottom: 15%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.05vw;
+    font-family: $font-main;
+    letter-spacing: 2px;
+    z-index: 4;
+    width: 27%;
+  }
+
+  .hire {
+    position: absolute;
+    bottom: 18%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5vw;
+    font-family: $font-main;
+    letter-spacing: 2px;
+    z-index: 4;
+    width: 27%;
+  }
+
+}
+@media (min-width: 890px) and (max-width: 1024px) {
+    .thumb{
+        background-size: contain;
+        background-position: center;
+        .name{
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4vw;
+        }
+        h1{
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5vw;
+        }
+        .description{
+            top: 72%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5vw;
+            width: 60%;
+            text-align: center;
+        }
+        .hire{
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3vw;
+            width: 60%;
+            text-align: center;
+        }
+    }
+}
+@media (min-width:768px) and (max-width: 890px){
+    .thumb{
+    background-size: contain;
+    background-position: center;
+    .name{
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4vw;
+        text-align: center;
+    }
+    h1{
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+    }
+    .description{
+        top: 72%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5vw;
+        width: 60%;
+        text-align: center;
+    }
+    .hire{
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3vw;
+        width: 60%;
+        text-align: center;
+    }
+}
+}
+@media (max-width:768px) {
+    .thumb{
+        background-size: cover;
+        background-position: center;
+        .name{
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4vw;
+            text-align: center;
+        }
+        h1{
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 7vw;
+        }
+        .description{
+            top: 72%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.7vw;
+            width: 60%;
+            text-align: center;
+        }
+        .hire{
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 6vw;
+            width: 60%;
+            text-align: center;
+        }
+    }
+}
+

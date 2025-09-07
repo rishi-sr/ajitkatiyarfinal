@@ -1,0 +1,154 @@
+$bg-light: #e5e5e5;
+$bg-dark: #ffffff;
+$text-light: #cccccc;
+$text-white: #ffffff;
+$shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+.project {
+    background-color: white;
+    background-image: 
+    linear-gradient(90deg, #e0e0e0 1px, transparent 1px),
+    linear-gradient(180deg, #e0e0e0 1px, transparent 1px);
+  background-size: 20px 20px; /* size of each rectangle cell */
+   
+  color: $text-light;
+  .spacer {
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 20vh;
+
+    .header{
+        h1{
+            color: black;
+
+            font-size: 5vw;
+        }
+    }
+  }
+
+  .carousel-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+   .header{
+    height: 10%;
+   }
+  }
+
+  .carousel-container {
+    position: sticky;
+    top: 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    will-change: transform;
+  }
+
+  .card {
+  position: relative;
+  height: 350px; // default height for desktops
+  width: 100%;
+  max-width: 450px; // keeps it from stretching too much
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: $bg-light;
+  border-radius: 12px;
+  cursor: pointer;
+
+  .card-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover .card-image {
+    transform: scale(1.08);
+  }
+
+  .card-content {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+
+    p {
+      margin: 0;
+      padding: 1rem 1.5rem;
+      font-size: clamp(1rem, 2vw, 2rem); // responsive font
+      font-weight: 900;
+      text-transform: uppercase;
+      color: $text-white;
+      background: linear-gradient(
+        to bottom right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.1)
+      );
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 8px;
+      text-align: center;
+    }
+  }
+}
+
+/* 📱 Mobile screens */
+
+}
+@media (max-width: 768px) {
+  .card {
+    height: 280px;
+    max-width: 90%; // use more width on small screens
+
+    .card-content p {
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+    }
+  }
+}
+
+/* 📱 Very small screens */
+@media (max-width: 480px) {
+  .project{
+
+    .spacer{
+      height: 1rem;
+      .header{
+        h1{
+          font-size: 10vw;
+        }
+      }
+    }
+
+    .carousel-section{
+      .carousel-container{
+        .carousel-track{
+          .card {
+    height: 220px;
+    width: 130px;
+
+    .card-content p {
+      font-size: 0.9rem;
+      padding: 0.6rem 0.8rem;
+    }
+  }
+        }
+      }
+    }
+  }
+  
+}

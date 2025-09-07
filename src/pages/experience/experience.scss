@@ -1,0 +1,347 @@
+$primary: rgb(209, 88, 2);
+#exp {
+  font-size: 3vw;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+/* Timeline Base */
+.exp{
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+
+}
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+  list-style-type: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    margin-left: -3px;
+    background: linear-gradient(
+      to bottom,
+      rgba(80, 80, 80, 0) 0%,
+      rgb(80, 80, 80) 8%,
+      rgb(80, 80, 80) 92%,
+      rgba(80, 80, 80, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  li {
+    position: relative;
+    margin: 2em 0;
+    clear: both;
+
+    /* DOT ON TIMELINE */
+    &:before {
+      content: '';
+      position: absolute;
+      top: 1.2em; /* aligns with card */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid $primary;
+      z-index: 2;
+    }
+  }
+
+  .direction-l,
+  .direction-r {
+    position: relative;
+    width: 45%;
+    padding: 1em;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+
+    .flag-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5em;
+
+      .flag {
+        font-weight: 600;
+        font-size: 1rem;
+        background: #fff;
+        padding: 6px 12px;
+        border-radius: 5px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+        /* triangle pointer */
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          border: 8px solid transparent;
+        }
+      }
+
+      .time-wrapper {
+        font-size: 0.8rem;
+        color: $primary;
+
+        .time {
+          background: #fff;
+          padding: 4px 6px;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      line-height: 1.5em;
+      font-style: italic;
+      color: #333;
+    }
+  }
+
+  /* LEFT SIDE */
+  .direction-l {
+    float: left;
+    text-align: right;
+
+    .flag:after {
+      right: -16px; /* pointer towards dot */
+      border-left-color: #f8f8f8;
+    }
+  }
+
+  /* RIGHT SIDE */
+  .direction-r {
+    float: right;
+    text-align: left;
+
+    .flag:after {
+      left: -16px;
+      border-right-color: #f8f8f8;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .timeline {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline:before {
+    left: 20px;
+  }
+
+  .timeline li:before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline li {
+    margin: 1.5em 0;
+  }
+
+  .timeline .direction-l,
+  .timeline .direction-r {
+    float: none;
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    text-align: left;
+
+    .flag:after {
+      left: -12px;
+      right: auto;
+      border-right-color: #f8f8f8;
+      border-left-color: transparent;
+    }
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #exp{
+    font-size: 8vw;
+  }
+  .timeline {
+    width: 85%;
+  }
+
+  .timeline .direction-l,
+  .timeline .direction-r {
+    width: 43%;
+  }
+}
+
+@media (max-width: 992px) {
+  .timeline {
+    width: 80%;
+  }
+
+  .timeline .direction-l,
+  .timeline .direction-r {
+    width: 90%;
+    float: none;
+    text-align: left;
+    margin-left: 60px;
+
+    .flag:after {
+      left: -12px;
+      right: auto;
+      border-right-color: #f8f8f8;
+      border-left-color: transparent;
+    }
+  }
+
+  .timeline:before {
+    left: 2%; /* shift vertical line left */
+  }
+
+  .timeline li:before {
+    left: 0.5%; /* dots aligned with line */
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #exp {
+    font-size: 10vw; // Big heading on small devices
+  }
+
+  .exp {
+    .timeline {
+      width: 100%;
+      padding: 1em 0;
+
+      &:before {
+        left: 4.3%;
+      }
+
+      li {
+        margin: 1em 0;
+
+        &::before {
+          left: 3%; // align dots with line
+          width: 10px;
+          height: 10px;
+        }
+
+        .direction-r,
+        .direction-l {
+          width: 85%;
+          margin-left: 40px;
+          padding: 0.8em;
+
+          .flag-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+
+            .flag {
+              font-size: 2.5vw;   // scales with screen
+              width: 45%;       // keeps flag from breaking text
+              padding: 4px 8px;
+            }
+          }
+
+          .time-wrapper {
+            text-align: right;
+
+            .time {
+              font-size: 2.3vw;
+              text-align: right;
+              display: inline-block;
+            }
+          }
+
+          .desc {
+            font-size: 0.75rem;
+            line-height: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #exp {
+    font-size: 16vw; // Big heading on small devices
+  }
+
+  .exp {
+    .timeline {
+      width: 100%;
+      padding: 1em 0;
+
+      &:before {
+        left: 6.5%; // central line
+      }
+
+      li {
+        margin: 1em 0;
+
+        &::before {
+          left: 4.5vw; // align dots with line
+          width: 10px;
+          height: 10px;
+        }
+
+        .direction-r,
+        .direction-l {
+          width: 80%;
+          margin-left: 40px;
+          padding: 0.8em;
+
+          .flag-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .flag {
+              font-size: 3vw;   // scales with screen
+              width: 45%;       // keeps flag from breaking text
+              padding: 4px 8px;
+            }
+          }
+
+          .time-wrapper {
+            text-align: right;
+
+            .time {
+              font-size: 2.3vw;
+              text-align: right;
+              display: inline-block;
+            }
+          }
+
+          .desc {
+            font-size: 0.75rem;
+            line-height: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}
