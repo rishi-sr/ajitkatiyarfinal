@@ -1,0 +1,75 @@
+.specialize{
+    height: 100vh;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    margin-top: 20vh;
+
+    .shead{
+        height: 20%;
+        font-size: 2vw;
+        color: #d15802;
+        display: flex;
+        background-color: white;
+        span{
+            font-size: 3vw;
+        }
+        h1{
+            display: flex;
+            gap: 10px;
+        }
+    }
+    .specialization-grid{
+        height: 80%;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        .card{
+            height: 300px;
+            width:400px;
+            border-radius: 30px;
+            border-left: 4px solid #d15802;
+            box-shadow: 0 0 10px 0px black;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            font-size: 1.6vw;
+            text-align: center;
+            font-family: sans-serif;
+
+            &:hover{
+                box-shadow: 0 0 10px 0 #d15802;
+            }
+
+            span{
+                font-size: 3vw;
+                color: #d15802;
+            }
+        }
+    } 
+}
+
+.anime{
+    animation: anim both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 60%;
+}
+@keyframes anim {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

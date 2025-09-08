@@ -5,7 +5,7 @@ import "./hero.scss";
 const Hero = () => {
   const [activeBoxes, setActiveBoxes] = useState([]);
   const hireRef = useRef(null);
-  const originalText = "Hire Me";
+  const originalText = "Consult Me!";
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
   const handleEnter = (i) => {

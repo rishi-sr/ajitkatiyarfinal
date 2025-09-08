@@ -1,10 +1,12 @@
 import './App.scss';
 import About from './pages/about/About';
+import Benefits from './pages/benefits/Benefits';
 import Experience from './pages/experience/Experience';
 import Footer from './pages/footer/Footer';
 import Hero from './pages/hero/Hero';
 import Navbar from './pages/navbar/Navbar';
 import Project from './pages/projects/Project';
+import Specialization from './pages/specialization/Specialization';
 
 function App() {
   return (
@@ -20,6 +22,10 @@ function App() {
         </div>
         <div className="section project-section">
           <Project />
+        </div>
+        <div className="section specialize-section">
+          <Specialization/>
+          <Benefits/>
         </div>
         <div className="section footer-section">
           <Footer />

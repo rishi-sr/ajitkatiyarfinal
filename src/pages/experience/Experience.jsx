@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import './experience.scss'
 
 const exp = [
@@ -82,7 +82,7 @@ const Experience = () => {
         <ul className="timeline">
         {exp.map((job, i) => (
           <li key={i}>
-            <div className={i % 2 === 0 ? "direction-r" : "direction-l"}>
+            <div className={i % 2 === 0 ? "direction-r autoshow-r" : "direction-l autoshow-l"}>
               <div className="flag-wrapper">
                 <span className="flag">{job.flag}</span>
                 <span className="time-wrapper">

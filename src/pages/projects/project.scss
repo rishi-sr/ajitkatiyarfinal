@@ -7,9 +7,9 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 .project {
     background-color: white;
     background-image: 
-    linear-gradient(90deg, #e0e0e0 1px, transparent 1px),
-    linear-gradient(180deg, #e0e0e0 1px, transparent 1px);
-  background-size: 20px 20px; /* size of each rectangle cell */
+    linear-gradient(90deg, #e0e0e0 0.4px, transparent 0.6px),
+    linear-gradient(180deg, #e0e0e0 0.6px, transparent 0.6px);
+  background-size: 20px 20px; 
    
   color: $text-light;
   .spacer {
@@ -22,10 +22,20 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     padding-top: 20vh;
 
     .header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
         h1{
             color: black;
-
             font-size: 5vw;
+            background-color: white;
+            padding: 10px;
+        }
+        h3{
+          color: #d15802;
+          background-color: white;
+          font-size: 2vw;
         }
     }
   }
@@ -58,14 +68,22 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
   .card {
   position: relative;
-  height: 350px; // default height for desktops
+  height: 550px; 
   width: 100%;
-  max-width: 450px; // keeps it from stretching too much
+  max-width: 650px; 
   flex-shrink: 0;
   overflow: hidden;
-  background-color: $bg-light;
+  background-color: white;
   border-radius: 12px;
   cursor: pointer;
+  border-left: 5px solid #d15802;
+  box-shadow: 0 0 10px 0px black;
+  
+  &:hover{
+    box-shadow: 0 0 10px 0px #d15802;
+    transform: scale(1.03);
+    
+    }
 
   .card-image {
     position: absolute;
@@ -75,33 +93,59 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.4s ease;
   }
 
-  &:hover .card-image {
-    transform: scale(1.08);
-  }
+  
 
   .card-content {
     position: absolute;
     inset: 0;
-    display: grid;
-    place-content: center;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    .number{
+      height: 12%;
+      width: 100%;
 
-    p {
-      margin: 0;
-      padding: 1rem 1.5rem;
-      font-size: clamp(1rem, 2vw, 2rem); // responsive font
-      font-weight: 900;
-      text-transform: uppercase;
-      color: $text-white;
-      background: linear-gradient(
-        to bottom right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.1)
-      );
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      border-radius: 8px;
-      text-align: center;
+      .circle{
+        width: 9%;
+        font-size: 1.7vw;
+        height: 100%;
+        align-self: flex-start;
+        background-color: #d15802;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+      }
+
+    }
+    .head{
+      height: 30%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 1.6vw;
+      color: black;
+      
+    }
+    .cont{
+      height: 60%;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      justify-content: flex-start;
+      flex-direction: column;
+      li{
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        color: rgb(61, 61, 61);
+      }
     }
   }
 }

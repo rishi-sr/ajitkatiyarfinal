@@ -8,10 +8,13 @@ const About = () => {
   const btnRef = useRef(null);
   const finalText = "Download Resume";
 
-  const controls = useAnimation();
+  // Controls for h1 animation
+  const h1Controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.5, // Element is considered in view when half visible
+    threshold: 1.0,
   });
+
+  const maskControls = useAnimation();
 
   useEffect(() => {
     if (!btnRef.current) return;
@@ -44,24 +47,32 @@ const About = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start({color: "#000", transition: { duration: 0.5 } });
+      h1Controls.start({ color: "#000", transition: { duration: 0.8 } });
+      maskControls.start({ scale: 1, transition: { duration: 0.8 } });
     } else {
-      controls.start({ color: "#333", transition: { duration: 0.5 } });
+      h1Controls.start({ color: "#333", transition: { duration: 0.8 } });
+      maskControls.start({ scale: 0.8, transition: { duration: 0.8 } });
     }
-  }, [inView, controls]);
+  }, [inView, h1Controls, maskControls]);
 
   return (
     <div className="about">
       <div className="abt-part1">
         <div className="box">
-          <div className="img" style={{backgroundImage:"url('ajitkatiyar.jpg')"}}>
-            <div className="img2" style={{backgroundImage:"url('mask.jpg')"}}></div>
+          <div className="img" style={{ backgroundImage: "url('ajitkatiyar.jpg')" }}>
+            <motion.div
+              className="img2"
+              style={{ backgroundImage: "url('mask.jpg')" }}
+              animate={maskControls}
+              initial={{ scale: 0.8 }}
+            />
           </div>
           <div className="details">
             <h3>ABOUT ME</h3>
             <motion.h1
               ref={ref}
-              animate={controls}
+              animate={h1Controls}
+              initial={{ color: "#333" }}
             >
               Generative AI and Data Science expertise – crafting scalable,
               innovative AI/ML solutions with 17+ years of IT leadership.

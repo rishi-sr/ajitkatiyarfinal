@@ -43,11 +43,11 @@ $font-main: 'Syne', sans-serif;
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 25%;
+    bottom: 20%;
     left: 52%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 4.8vw;
+    font-size: 5vw;
     font-family: $font-main;
     letter-spacing: 2px;
     z-index: 4;
@@ -82,6 +82,9 @@ $font-main: 'Syne', sans-serif;
     letter-spacing: 2px;
     z-index: 4;
     width: 27%;
+    text-decoration: dashed!important;
+    text-decoration-color: white;
+    text-decoration-thickness: 2px;
   }
 
 }

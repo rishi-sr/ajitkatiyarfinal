@@ -3,14 +3,86 @@ import "./project.scss";
 import { motion } from "framer-motion";
 
 const cards = [
-  { url: "pr.png", title: "Project 1", id: 1 },
-  { url: "pr.png", title: "Project 2", id: 2 },
-  { url: "pr.png", title: "Project 3", id: 3 },
-  { url: "pr.png", title: "Project 4", id: 4 },
-  { url: "pr.png", title: "Project 5", id: 5 },
-  { url: "pr.png", title: "Project 6", id: 6 },
-  { url: "pr.png", title: "Project 7", id: 7 },
+  { 
+    id: 1,
+    title: "Foundation & Mathematics", 
+    desc: [
+      "Linear Algebra & Statistics",
+      "Calculus for ML",
+      "Python Programming Mastery",
+      "Data Structures & Algorithms",
+      "NumPy, Pandas, Matplotlib"
+    ]
+  },
+  { 
+    id: 2,
+    title: "Machine Learning Core", 
+    desc: [
+      "Supervised & Unsupervised Learning",
+      "Feature Engineering & Selection",
+      "Model Selection & Validation",
+      "Ensemble Methods",
+      "Scikit-learn, XGBoost"
+    ]
+  },
+  { 
+    id: 3,
+    title: "Deep Learning & Neural Networks", 
+    desc: [
+      "CNNs, RNNs, LSTMs",
+      "Transfer Learning",
+      "Computer Vision & NLP",
+      "TensorFlow, PyTorch, Keras",
+      "Model Optimization Techniques"
+    ]
+  },
+  { 
+    id: 4,
+    title: "Generative AI & LLMs", 
+    desc: [
+      "Transformer Architecture",
+      "Fine-tuning Large Language Models",
+      "Prompt Engineering & Optimization",
+      "GPT, BERT, T5 Implementation",
+      "Text Generation & Summarization"
+    ]
+  },
+  { 
+    id: 5,
+    title: "RAG & Vector Databases", 
+    desc: [
+      "Retrieval-Augmented Generation",
+      "Vector Embeddings & Similarity Search",
+      "Pinecone, Weaviate, ChromaDB",
+      "Document Processing & Chunking",
+      "Semantic Search Implementation"
+    ]
+  },
+  { 
+    id: 6,
+    title: "Agentic AI & MCP", 
+    desc: [
+      "Multi-Agent Systems Design",
+      "Model Context Protocol (MCP)",
+      "Agent Communication & Coordination",
+      "LangChain, AutoGen, CrewAI",
+      "Tool Use & Function Calling"
+    ]
+  },
+  { 
+    id: 7,
+    title: "MLOps & Production", 
+    desc: [
+      "Model Versioning & Tracking",
+      "CI/CD for ML Pipelines",
+      "Docker, Kubernetes, MLflow",
+      "Model Monitoring & Drift Detection",
+      "A/B Testing for ML Models"
+    ]
+  }
 ];
+
+
 
 export default function Project({ scrollContainerRef }) {
   const sectionRef = useRef(null);
@@ -77,7 +149,8 @@ export default function Project({ scrollContainerRef }) {
     <div className="project">
       <div className="spacer">
         <div className="header">
-          <h1>My Projects</h1>
+          <h1>Master AI/ML/DATA SCIENCE</h1>
+          <h3>Complete Course Curriculum</h3>
         </div>
       </div>
 
@@ -89,14 +162,20 @@ export default function Project({ scrollContainerRef }) {
             className="carousel-track"
             style={{ paddingLeft: `${sidePadding}px`, paddingRight: `${sidePadding}px` }}
           >
-            {cards.map(({ id, url, title }) => (
+            {cards.map((card,id) => (
               <div key={id} className="card">
                 <div
                   className="card-image"
-                  style={{ backgroundImage: `url(${url})` }}
                 />
                 <div className="card-content">
-                  <p>{title}</p>
+                  <div className="number">
+                    <div className="circle">{card.id}</div>
+                  </div>
+                  <div className="head">{card.title}</div>
+                  <div className="cont">
+                    {card.desc.map((point, idx)=>(
+                    <li key={idx}><i class="fa-solid fa-caret-right"></i>{point}</li>))}
+                  </div>
                 </div>
               </div>
             ))}
