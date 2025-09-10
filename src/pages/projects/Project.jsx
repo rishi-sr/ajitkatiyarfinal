@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./project.scss";
 import { motion } from "framer-motion";
+import {ReactTyped} from "react-typed";
+
 
 const cards = [
   { 
@@ -89,24 +91,50 @@ export default function Project({ scrollContainerRef }) {
   const trackRef = useRef(null);
   const [scrollDistance, setScrollDistance] = useState(0);
   const [sidePadding, setSidePadding] = useState(0);
+  const [inView, setInView] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setInView(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     function calculateSizes() {
-      if (!trackRef.current || !sectionRef.current) return;
+  if (!trackRef.current || !sectionRef.current) return;
 
-      const trackWidth = trackRef.current.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      const cardWidth = 450;
-      const padding = (viewportWidth - cardWidth) / 2;
+  const trackWidth = trackRef.current.scrollWidth;
+  const viewportWidth = window.innerWidth;
 
-      // Adjust scroll distance so that last card is centered at end
-      const distance = Math.max(0, trackWidth - viewportWidth + padding + padding);
+  const card = trackRef.current.querySelector(".card");
+  const cardWidth = card ? card.offsetWidth : 800;
 
-      setScrollDistance(distance);
-      setSidePadding(padding);
+  const padding = (viewportWidth - cardWidth)/2;
 
-      sectionRef.current.style.height = `${distance + window.innerHeight}px`;
-    }
+  const distance = Math.max(padding, trackWidth - viewportWidth + padding);
+
+  setScrollDistance(distance);
+  setSidePadding(padding);
+
+  sectionRef.current.style.height = `${distance + window.innerHeight}px`;
+}
+
 
     calculateSizes();
     window.addEventListener("resize", calculateSizes);
@@ -131,6 +159,7 @@ export default function Project({ scrollContainerRef }) {
 
       if (rect.top <= 0 && rect.bottom >= viewportHeight) {
         const progress = Math.min(1, Math.max(0, -rect.top / scrollableHeight));
+        
         track.style.transform = `translateX(${-progress * scrollDistance}px)`;
       } else if (rect.top > 0) {
         track.style.transform = `translateX(0px)`;
@@ -147,20 +176,38 @@ export default function Project({ scrollContainerRef }) {
 
   return (
     <div className="project">
-      <div className="spacer">
-        <div className="header">
-          <h1>Master AI/ML/DATA SCIENCE</h1>
-          <h3>Complete Course Curriculum</h3>
-        </div>
-      </div>
 
       <section ref={sectionRef} className="carousel-section">
 
         <div className="carousel-container">
+      <div className="spacer">
+        <div className="header" ref={headerRef}>
+  <h1>
+    {inView && (
+    <ReactTyped
+      strings={["Master AI/ML/DATA SCIENCE"]}
+      typeSpeed={90}
+      backSpeed={30}
+      showCursor={false}
+    />)}
+  </h1>
+  <h3>
+    {inView && (
+    <ReactTyped
+      strings={["Complete Course Curriculum"]}
+      typeSpeed={40}
+      backSpeed={20}
+      startDelay={300}
+      showCursor={false}
+
+    />)}
+  </h3>
+</div>
+      </div>
           <div
             ref={trackRef}
             className="carousel-track"
-            style={{ paddingLeft: `${sidePadding}px`, paddingRight: `${sidePadding}px` }}
+            style={{ paddingLeft: `${sidePadding*2.5}px`, paddingRight: `${sidePadding}px` }}
           >
             {cards.map((card,id) => (
               <div key={id} className="card">

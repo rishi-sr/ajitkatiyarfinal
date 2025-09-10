@@ -1,75 +1,167 @@
-.specialize{
-    height: 100vh;
+$bg-light: #e5e5e5;
+$bg-dark: #ffffff;
+$text-light: #cccccc;
+$text-white: #ffffff;
+$shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+.specialize {
+  color: $text-light;
+  animation: changecolor both;
+  animation-timeline: view();
+  animation-range: entry 40% cover 40%;
+
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px; 
+
+  @keyframes changecolor {
+  from{
     background-color: white;
-    width: 100%;
+  }
+  to{
+    background-color: black;
+  }
+}
+
+  .carousel-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    
+  }
+
+  .carousel-container {
+    position: sticky;
+    top: 0;
+    height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    overflow: hidden;
     flex-direction: column;
-    font-family: sans-serif;
-    margin-top: 20vh;
+    margin-top: 30vh;
 
-    .shead{
-        height: 20%;
-        font-size: 2vw;
+    .spacer {
+      flex: 0 0 auto;
+      position: sticky;
+      top: 15%;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h3 {
+          color: #d15802;
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+
+  .carousel-track {
+    display: flex;
+    width: 100%;
+    will-change: transform;
+    gap: 50px;
+    height: 100vh;
+    margin-top: 24vh;
+  }
+
+  .card {
+    position: relative;
+    height: 450px; 
+    width: 500px;
+    max-width: 500px; 
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    border-left: 8px solid #d15802b8;
+    box-shadow: 0 0 10px 0px black;
+    
+    &:hover {
+      box-shadow: 0 0 20px 5px #d15802;
+      transform: translateY(-5px);
+    }
+
+    .card-image {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.4s ease;
+    }
+
+    .card-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 3rem;
+
+      
+
+      .icon{
+        font-size: 10vw;
         color: #d15802;
-        display: flex;
-        background-color: white;
-        span{
-            font-size: 3vw;
-        }
-        h1{
-            display: flex;
-            gap: 10px;
-        }
+      }
+      .title{
+        font-size: 2.1vw;
+        color: black;
+      }
     }
-    .specialization-grid{
-        height: 80%;
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-
-        .card{
-            height: 300px;
-            width:400px;
-            border-radius: 30px;
-            border-left: 4px solid #d15802;
-            box-shadow: 0 0 10px 0px black;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 30px;
-            font-size: 1.6vw;
-            text-align: center;
-            font-family: sans-serif;
-
-            &:hover{
-                box-shadow: 0 0 10px 0 #d15802;
-            }
-
-            span{
-                font-size: 3vw;
-                color: #d15802;
-            }
-        }
-    } 
+  }
 }
 
-.anime{
-    animation: anim both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 60%;
+@media (max-width: 768px) {
+  .card {
+    height: 280px;
+    max-width: 90%;
+
+    .card-content p {
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+    }
+  }
 }
-@keyframes anim {
-    from{
-        opacity: 0;
-        transform: translateY(100px);
+
+@media (max-width: 480px) {
+  .project {
+    .spacer {
+      height: 1rem;
+
+      .header {
+        h1 {
+          font-size: 10vw;
+        }
+      }
     }
-    to{
-        opacity: 1;
-        transform: translateY(0);
+
+    .carousel-section {
+      .carousel-container {
+        .carousel-track {
+          .card {
+            height: 220px;
+            width: 130px;
+
+            .card-content p {
+              font-size: 0.9rem;
+              padding: 0.6rem 0.8rem;
+            }
+          }
+        }
+      }
     }
+  }
 }

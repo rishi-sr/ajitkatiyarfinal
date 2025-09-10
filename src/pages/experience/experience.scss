@@ -142,9 +142,13 @@ $primary: rgb(209, 88, 2);
     }
 
     .desc {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      padding: 4px 6px;
       line-height: 1.5em;
       color: #333;
+      font-family: 'syne';
+      display: flex;
+      text-align: justify;
     }
   }
 

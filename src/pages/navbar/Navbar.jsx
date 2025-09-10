@@ -1,6 +1,6 @@
   import React, { useState } from 'react';
   import './navbar.scss';
-
+  import { Link } from 'react-router-dom';
   const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -24,10 +24,10 @@
           <div className="menu-content">
             <h2>Menu</h2>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Contact</li>
+              <a><Link to="/">Home</Link></a>
+              <a><Link to="/about">About</Link></a>
+              <a>Courses</a>
+              <a>Consult ME</a>
             </ul>
           </div>
         </div>

@@ -1,5 +1,5 @@
 $primary: rgb(209, 88, 2);
-$font-main: 'Syne', sans-serif;
+$font-main: 'Syne';
 
 .thumb {
   display: flex;
@@ -47,7 +47,7 @@ $font-main: 'Syne', sans-serif;
     left: 52%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 5vw;
+    font-size: 4.1vw;
     font-family: $font-main;
     letter-spacing: 2px;
     z-index: 4;
@@ -74,7 +74,7 @@ $font-main: 'Syne', sans-serif;
   .hire {
     position: absolute;
     bottom: 18%;
-    left: 86%;
+    left: 96%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 1.5vw;

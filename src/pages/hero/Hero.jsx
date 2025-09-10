@@ -36,7 +36,7 @@ const Hero = () => {
           hireRef.current.innerText = originalText;
         }
       }
-    }, 30); // change letters every 30ms
+    }, 30); 
   };
 
   return (
@@ -46,7 +46,7 @@ const Hero = () => {
           key={i}
           className={`box ${activeBoxes.includes(i) ? "glow" : ""}`}
           onMouseEnter={() => handleEnter(i)}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1 }}
         ></motion.div>
       ))}
       <p className="name">Ajit Katiyar</p>
@@ -60,7 +60,7 @@ const Hero = () => {
         ref={hireRef}
         className="hire"
         onMouseEnter={scrambleText}
-        whileHover={{ scale: 1.05, color: "#ff6600" }}
+        whileHover={{ color: "#ff6600" }}
       >
         {originalText}
       </motion.p>

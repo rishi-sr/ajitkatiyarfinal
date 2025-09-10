@@ -1,10 +1,81 @@
 .benefits{
-    height: 100vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding-top: 30vh;
+   background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px; 
+  .cards-d{
+    height: 95%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .bhead{
-        height: 20%;
-        h2{
-            font-size: 30px;
-        }
+    flex-direction: column;
+    .demhead{
+      height: 15vh;
+      font-size: 2vw;
+      color: #d15802;
     }
+
+    .row{
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      .card{
+        height: 30vh;
+        background-color: white;
+        width: 30vh;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .icon{
+          color: #d15802;
+          font-size: 4vw;
+        }
+        p{
+          font-size: 1.3vw;
+        }
+      }
+    }
+    .dtu{
+      animation: dtu1 both;
+      animation-timeline: view(50% 20%);
+    }
+    @keyframes dtu1 {
+      from{
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .dtu2{
+      animation: dtu2 both;
+      animation-timeline: view(90% 10%);
+    }
+    @keyframes dtu2 {
+      from{
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }
