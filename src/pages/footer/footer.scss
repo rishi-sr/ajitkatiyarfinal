@@ -184,3 +184,34 @@
     }
   }
 }
+@media (min-width:590px) and (max-width:786px) {
+  .copyright-area{
+    width: 100%;
+    .container{
+      .row{
+        width: 90%;
+        .col{
+          .copyright-text{
+            p{
+              font-size: 10px;
+            }
+
+            
+          }
+
+          .footer-menu{
+            ul{
+
+              li{
+                a{
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}

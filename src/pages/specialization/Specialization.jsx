@@ -82,15 +82,22 @@ export default function Specialization({ scrollContainerRef }) {
   const card = trackRef.current.querySelector(".card");
   const cardWidth = card ? card.offsetWidth : 800;
 
-  const padding = (viewportWidth - cardWidth)/2;
+  const padding = (viewportWidth - cardWidth) / 2;
 
-  const distance = Math.max(padding, trackWidth - viewportWidth + padding);
+  let distance = trackWidth - viewportWidth + padding;
+
+  if (viewportWidth <= 480) {
+    distance *= 1.2; 
+  } else if (viewportWidth <= 768) {
+    distance *= 1.1;
+  }
 
   setScrollDistance(distance);
   setSidePadding(padding);
 
   sectionRef.current.style.height = `${distance + window.innerHeight}px`;
 }
+
 
 
     calculateSizes();

@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -88,7 +89,7 @@ const Footer = () => {
               <div className="footer-menu">
                 <ul>
                   <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
+                  <li><a href=""><Link to="/about">About</Link></a></li>
                   <li><a href="#">Project</a></li>
                   <li><a href="#">Experience</a></li>
                   <li><a href="#">Contact</a></li>

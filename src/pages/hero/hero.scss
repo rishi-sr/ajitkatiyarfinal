@@ -4,7 +4,6 @@ $font-main: 'Syne';
 .thumb {
   display: flex;
   flex-wrap: wrap;
-  background: black;
   height:  92vh;
   overflow: hidden;
   background-size: contain;
@@ -46,7 +45,7 @@ $font-main: 'Syne';
     bottom: 20%;
     left: 52%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
     font-size: 4.1vw;
     font-family: $font-main;
     letter-spacing: 2px;
@@ -54,7 +53,7 @@ $font-main: 'Syne';
 
     span {
       color: transparent;
-      -webkit-text-stroke: 1px white;
+      -webkit-text-stroke: 1px black;
     }
   }
 
@@ -63,7 +62,7 @@ $font-main: 'Syne';
     bottom: 15%;
     left: 26%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
     font-size: 1.05vw;
     font-family: $font-main;
     letter-spacing: 2px;

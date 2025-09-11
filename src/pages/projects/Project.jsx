@@ -122,18 +122,25 @@ export default function Project({ scrollContainerRef }) {
   const trackWidth = trackRef.current.scrollWidth;
   const viewportWidth = window.innerWidth;
 
-  const card = trackRef.current.querySelector(".card");
+  const card = trackRef.current.querySelector(".card-p");
   const cardWidth = card ? card.offsetWidth : 800;
 
-  const padding = (viewportWidth - cardWidth)/2;
+  const padding = (viewportWidth - cardWidth) / 2;
 
-  const distance = Math.max(padding, trackWidth - viewportWidth + padding);
+  let distance = trackWidth - viewportWidth + padding;
+
+  if (viewportWidth <= 480) {
+    distance *= 1.1; 
+  } else if (viewportWidth <= 768) {
+    distance *= 1.1;
+  }
 
   setScrollDistance(distance);
   setSidePadding(padding);
 
   sectionRef.current.style.height = `${distance + window.innerHeight}px`;
 }
+
 
 
     calculateSizes();
@@ -177,49 +184,49 @@ export default function Project({ scrollContainerRef }) {
   return (
     <div className="project">
 
-      <section ref={sectionRef} className="carousel-section">
+      <section ref={sectionRef} className="carousel-section-p">
 
-        <div className="carousel-container">
-      <div className="spacer">
-        <div className="header" ref={headerRef}>
-  <h1>
-    {inView && (
-    <ReactTyped
-      strings={["Master AI/ML/DATA SCIENCE"]}
-      typeSpeed={90}
-      backSpeed={30}
-      showCursor={false}
-    />)}
-  </h1>
-  <h3>
-    {inView && (
-    <ReactTyped
-      strings={["Complete Course Curriculum"]}
-      typeSpeed={40}
-      backSpeed={20}
-      startDelay={300}
-      showCursor={false}
-
-    />)}
-  </h3>
-</div>
-      </div>
+        <div className="carousel-container-p">
+          <div className="spacer">
+            <div className="header" ref={headerRef}>
+              <h1>
+                {inView && (
+                <ReactTyped
+                  strings={["Master AI/ML/DATA SCIENCE"]}
+                  typeSpeed={90}
+                  backSpeed={30}
+                  showCursor={false}
+                />)}
+              </h1>
+              <h3>
+                {inView && (
+                <ReactTyped
+                  strings={["Complete Course Curriculum"]}
+                  typeSpeed={40}
+                  backSpeed={20}
+                  startDelay={300}
+                  showCursor={false}
+                
+                />)}
+              </h3>
+            </div>
+          </div>
           <div
             ref={trackRef}
-            className="carousel-track"
+            className="carousel-track-p"
             style={{ paddingLeft: `${sidePadding*2.5}px`, paddingRight: `${sidePadding}px` }}
           >
             {cards.map((card,id) => (
-              <div key={id} className="card">
+              <div key={id} className="card-p">
                 <div
-                  className="card-image"
+                  className="card-image-p"
                 />
-                <div className="card-content">
+                <div className="card-content-p">
                   <div className="number">
                     <div className="circle">{card.id}</div>
                   </div>
-                  <div className="head">{card.title}</div>
-                  <div className="cont">
+                  <div className="head-p">{card.title}</div>
+                  <div className="cont-p">
                     {card.desc.map((point, idx)=>(
                     <li key={idx}><i class="fa-solid fa-caret-right"></i>{point}</li>))}
                   </div>

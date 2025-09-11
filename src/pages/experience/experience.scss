@@ -152,13 +152,12 @@ $primary: rgb(209, 88, 2);
     }
   }
 
-  /* LEFT SIDE */
   .direction-l {
     float: left;
     text-align: right;
 
     .flag:after {
-      right: -16px; /* pointer towards dot */
+      right: -16px; 
       border-left-color: #f8f8f8;
     }
   }
@@ -235,7 +234,7 @@ $primary: rgb(209, 88, 2);
 
   .timeline .direction-l,
   .timeline .direction-r {
-    width: 90%;
+    width: 80%;
     float: none;
     text-align: left;
     margin-left: 60px;
@@ -285,7 +284,7 @@ $primary: rgb(209, 88, 2);
 
         .direction-r,
         .direction-l {
-          width: 85%;
+          width: 70%;
           margin-left: 40px;
           padding: 0.8em;
 
@@ -324,7 +323,8 @@ $primary: rgb(209, 88, 2);
 
 @media (max-width: 480px) {
   #exp {
-    font-size: 16vw; // Big heading on small devices
+    font-size: 10vw;
+    margin-top: 10vh; // Big heading on small devices
   }
 
   .exp {
@@ -347,8 +347,8 @@ $primary: rgb(209, 88, 2);
 
         .direction-r,
         .direction-l {
-          width: 80%;
-          margin-left: 40px;
+          width: 65%;
+          margin-left: 55px;
           padding: 0.8em;
 
           .flag-wrapper {

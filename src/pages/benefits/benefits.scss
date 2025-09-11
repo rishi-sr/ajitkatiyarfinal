@@ -1,80 +1,147 @@
-.benefits{
-  height: 100vh;
+.benefits {
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 20vh;
   background-color: black;
-  padding-top: 30vh;
-   background-image: 
+
+  /* Grid background */
+  background-image: 
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px; 
-  .cards-d{
-    height: 95%;
-    width: 80%;
+  background-size: 30px 30px;
+
+  .cards-d {
+    width: 90%;
+    max-width: 1400px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    flex-direction: column;
-    .demhead{
-      height: 15vh;
-      font-size: 2vw;
+    .demhead {
+      height: auto;
+      font-size: clamp(1.5rem, 2vw, 2.5rem);
       color: #d15802;
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    .row{
-      height: 40vh;
+    .row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 50px;
+      flex-wrap: wrap;   // ✅ allows cards to wrap on smaller screens
+      gap: clamp(20px, 4vw, 50px);
+      margin-bottom: 3rem;
 
-      .card{
-        height: 30vh;
+      .card {
         background-color: white;
-        width: 30vh;
         border-radius: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        .icon{
+        padding: 1rem;
+
+        /* Responsive sizing */
+        width: clamp(180px, 16vw, 280px);
+        height: clamp(180px, 16vw, 280px);
+
+        .icon {
           color: #d15802;
-          font-size: 4vw;
+          font-size: clamp(2rem, 4vw, 3.5rem);
+          margin-bottom: 0.8rem;
         }
-        p{
-          font-size: 1.3vw;
+
+        p {
+          font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+          text-align: center;
         }
       }
     }
-    .dtu{
+
+    /* Animations */
+    .dtu {
       animation: dtu1 both;
       animation-timeline: view(50% 20%);
     }
     @keyframes dtu1 {
-      from{
+      from {
         opacity: 0;
         transform: translateY(100px);
       }
-      to{
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    .dtu2{
+
+    .dtu2 {
       animation: dtu2 both;
       animation-timeline: view(90% 10%);
     }
     @keyframes dtu2 {
-      from{
+      from {
         opacity: 0;
         transform: translateY(100px);
       }
-      to{
+      to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .benefits {
+    
+    padding-top: 15vh;
+
+    .cards-d {
+      .row {
+        gap: 30px;
+        .card {
+          width: 40%;
+          height: auto;
+          padding: 2rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .benefits {
+    padding-top: 10vh;
+
+    .cards-d {
+      .demhead {
+        font-size: 1.5rem;
+      }
+
+      .row {
+        flex-direction: column;
+        gap: 20px;
+
+        .card {
+          width: 90%;
+          height: auto;
+          padding: 1.5rem 1rem;
+
+          .icon {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
       }
     }
   }
