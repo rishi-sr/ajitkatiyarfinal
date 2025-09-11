@@ -381,4 +381,24 @@ $primary: rgb(209, 88, 2);
       }
     }
   }
+  @keyframes rtol {
+    from{
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes ltor {
+    from{
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
