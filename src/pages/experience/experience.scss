@@ -1,4 +1,4 @@
-$primary: rgb(209, 88, 2);
+$primary: #00246B;
 #exp {
   font-size: 3vw;
   width: 100%;
@@ -15,6 +15,7 @@ $primary: rgb(209, 88, 2);
   display: flex;
   background-color: white;
   flex-direction: column;
+  color: #00246B;
 
 }
 .timeline {
@@ -47,11 +48,10 @@ $primary: rgb(209, 88, 2);
     margin: 2em 0;
     clear: both;
 
-    /* DOT ON TIMELINE */
     &:before {
       content: '';
       position: absolute;
-      top: 1.2em; /* aligns with card */
+      top: 1.2em;
       left: 50%;
       transform: translateX(-50%);
       width: 16px;
@@ -60,6 +60,7 @@ $primary: rgb(209, 88, 2);
       background: #fff;
       border: 4px solid $primary;
       z-index: 2;
+      color: #00246B;
     }
 
     .autoshow-r{

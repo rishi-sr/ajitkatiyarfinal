@@ -1,81 +1,55 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import './abt.scss'
-import Navbar from '../navbar/Navbar'
-
-const finalText = "Download Resume";
+import React from 'react';
+import './abt.scss';
+import NewNav from '../newnav/NewNav';
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { SiGooglescholar } from "react-icons/si";
+const social = [
+  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/yourusername/" },
+  { icon: <FaTwitter />, url: "https://twitter.com/yourusername" },
+  { icon: <FaGithub />, url: "https://github.com/yourusername" },
+  { icon: <SiGooglescholar />, url: "https://scholar.google.com/citations?user=yourid" },
+];
 
 const Abt = () => {
-  const btnRef = useRef(null);
-  const h1Controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 1.0,
-  });
-
-  useEffect(() => {
-    if (!btnRef.current) return;
-
-    const el = btnRef.current;
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-
-    const scramble = () => {
-      let frames = 0;
-      const totalFrames = 6;
-      const interval = setInterval(() => {
-        if (frames < totalFrames) {
-          el.innerText = finalText
-            .split("")
-            .map((char) =>
-              Math.random() > 0.5 ? char : chars[Math.floor(Math.random() * chars.length)]
-            )
-            .join("");
-          frames++;
-        } else {
-          el.innerText = finalText;
-          clearInterval(interval);
-        }
-      }, 100);
-    };
-
-    el.addEventListener("mouseenter", scramble);
-    return () => {
-      el.removeEventListener("mouseenter", scramble);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (inView) {
-      h1Controls.start({ color: "#fffceb", transition: { duration: 0.8 } });
-    } else {
-      h1Controls.start({ color: "#fff", transition: { duration: 0.8 } });
-    }
-  }, [inView, h1Controls]);
+  const stars = Array.from({ length: 20 });
 
   return (
     <>
-      <Navbar />
-      <div className="about-p">
-        <div className="abt-body">
-          <div className="img">
-            <div className="img2">
-              <img src="ajitkatiyar1.jpg" alt="Profile" />
-            </div>
-          </div>
-          <div className="details">
-            <h3>ABOUT ME</h3>
-            <motion.h1
-              ref={ref}
-              animate={h1Controls}
-              initial={{ color: "#fff" }}
-            >
-              Generative AI and Data Science expertise – crafting scalable,
-              innovative AI/ML solutions with 17+ years of IT leadership.
-            </motion.h1>
-            <a ref={btnRef} className="resume-btn" role="button">{finalText}</a>
+      <NewNav />
+      <div className="abt">
+        <div className="night">
+        {stars.map((_, index) => (
+          <div
+            key={index}
+            className="shooting_star"
+            style={{
+              left: `${Math.random() * 100}vw`,
+              animationDelay: `${Math.random() * 5000}ms`
+            }}
+          />
+        ))}
+      </div>
+        <div className="img">
+          <div className="abt-img c">
+            <img src="ajitkatiyar1.jpg" alt="Profile" />
           </div>
         </div>
+        <div className="abt-text">
+         <div className="abt-data">
+           <h1>About Me</h1>
+          <p>Hi, I’m Ajit Kumar — an AI/ML and Data Science expert with over 17 years of experience in delivering innovative solutions across industries like telecom, finance, healthcare, and agriculture. I specialize in designing and deploying scalable AI systems using frameworks like TensorFlow, PyTorch, and Langchain. With hands-on experience in generative models, LLMs, and cloud platforms like AWS, I’m passionate about transforming ideas into intelligent applications that solve real-world problems and drive business growth.</p>
+          <div className="cards-abt">
+            {social.map((social, id)=>(
+            <div className="card" key={id}>
+              <a href={social.url}>{social.icon}</a>
+            </div>
+            ))}
+          </div>
+        </div>
+         </div>
       </div>
+
+      
     </>
   );
 };

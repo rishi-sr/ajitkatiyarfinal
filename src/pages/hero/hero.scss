@@ -18,12 +18,12 @@ $font-main: 'Syne';
     width: 35px;
     height: 35px;
     transition: border-color 1s ease;
-    border: 1.5px solid rgba(46, 45, 45, 0.077);
+    border: 1.5px solid rgba(46, 45, 45, 0.03);
     z-index: 3;
   }
 
   .glow {
-    border: 1.5px solid $primary;
+    border: 1.8px solid #00246b;
   }
 
   .name {
@@ -36,6 +36,7 @@ $font-main: 'Syne';
     font-family: $font-main;
     letter-spacing: 2px;
     z-index: 4;
+    color: #00246B;
   }
 
   h1 {
@@ -75,7 +76,7 @@ $font-main: 'Syne';
     bottom: 18%;
     left: 96%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
     font-size: 1.5vw;
     font-family: $font-main;
     letter-spacing: 2px;

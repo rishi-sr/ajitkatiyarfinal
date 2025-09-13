@@ -31,7 +31,7 @@
       gap: 1rem;
 
       i {
-        color: #d15802;
+        color: #00246B;
         font-size: 30px;
       }
 
@@ -97,7 +97,7 @@
         bottom: -10px;
         height: 2px;
         width: 50px;
-        background: #d15802;
+        background: #00246B;
       }
     }
 
@@ -110,7 +110,7 @@
           color: #878787;
           text-decoration: none;
           &:hover {
-            color: #d15802;
+            color: #00246B;
           }
         }
       }
@@ -127,9 +127,10 @@
         text-align: center;
         color: rgba(255, 255, 255, 0.9);
         border-radius: 50px;
-        background: linear-gradient(-45deg, #d15802, #FF3D77, #f19423, #d15802);
+        background: linear-gradient(-45deg, #00246B, #573dff, #23b0f1, #00246B);
         background-size: 600%;
         animation: anime 16s linear infinite;
+        border: none;
         position: absolute;
       }
       .btn2{
@@ -165,7 +166,7 @@
         font-size: 14px;
         color: #878787;
         a {
-          color: #d15802;
+          color: #00246B;
         }
       }
     }
@@ -177,7 +178,7 @@
         li a {
           color: #878787;
           &:hover {
-            color: #d15802;
+            color: #00246B;
           }
         }
       }

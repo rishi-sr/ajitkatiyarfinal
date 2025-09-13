@@ -40,7 +40,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="thumb" style={{ backgroundImage: "url('ajitkatiyar.png')" }}>
+    <div className="thumb" style={{ backgroundImage: "url('ajitkatiyar.jpg')" }}>
       {Array.from({ length: 2000 }).map((_, i) => (
         <motion.div
           key={i}
@@ -60,7 +60,7 @@ const Hero = () => {
         ref={hireRef}
         className="hire"
         onMouseEnter={scrambleText}
-        whileHover={{ color: "#ff6600" }}
+        whileHover={{ color: "#00246B" }}
       >
         {originalText}
       </motion.p>

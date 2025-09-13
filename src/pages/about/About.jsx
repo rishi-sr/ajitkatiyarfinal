@@ -59,12 +59,11 @@ const About = () => {
     <div className="about">
       <div className="abt-part1">
         <div className="box">
-          <div className="img" style={{ backgroundImage: "url('ajitkatiyar.jpg')" }}>
+          <div className="img" style={{ backgroundImage: "url('ajitkatiyar1.png')" }}>
             <div
               className="img2 shrink"
               style={{ backgroundImage: "url('mask.jpg')" }}
-                // animate={maskControls}
-                // initial={{ scale: 0.8 }}
+                
             />
           </div>
           <div className="details">

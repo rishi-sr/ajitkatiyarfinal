@@ -1,4 +1,4 @@
-.navbar {
+.navbar-new {
   height: 8vh;
   width: 100%;
   position: sticky;
@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  background-color: transparent;
 
   .img {
     height: 60px;
@@ -34,7 +35,7 @@
     .line {
       height: 2px;
       width: 100%;
-      background-color: black;
+      background-color: white;
       transition: all 0.3s ease;
       mix-blend-mode: difference;
     }

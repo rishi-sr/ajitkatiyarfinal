@@ -4,27 +4,13 @@ $text-light: #cccccc;
 $text-white: #ffffff;
 $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
-.specialize {
+.project {
   color: $text-light;
-  animation: changecolor both;
-  animation-timeline: view();
-  animation-range: entry 40% cover 40%;
+  margin-top: 90vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
-  background-image: 
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px; 
 
-  @keyframes changecolor {
-  from{
-    background-color: white;
-  }
-  to{
-    background-color: black;
-  }
-}
-
-  .carousel-section {
+  .carousel-section-p {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -32,7 +18,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     
   }
 
-  .carousel-container {
+  .carousel-container-p {
     position: sticky;
     top: 0;
     height: 90vh;
@@ -58,15 +44,22 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         justify-content: center;
         flex-direction: column;
 
+        h1 {
+          color: white;
+          font-size: 5vw;
+          padding: 6px;
+          margin: 0;
+        }
+
         h3 {
           color: #00246B;
-          font-size: 5vw;
+          font-size: 2vw;
         }
       }
     }
   }
 
-  .carousel-track {
+  .carousel-track-p {
     display: flex;
     width: 100%;
     will-change: transform;
@@ -75,7 +68,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     margin-top: 24vh;
   }
 
-  .card {
+  .card-p {
     position: relative;
     height: 450px; 
     width: 500px;
@@ -93,7 +86,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transform: translateY(-5px);
     }
 
-    .card-image {
+    .card-image-p {
       position: absolute;
       inset: 0;
       background-size: cover;
@@ -101,7 +94,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transition: transform 0.4s ease;
     }
 
-    .card-content {
+    .card-content-p {
       position: absolute;
       inset: 0;
       display: flex;
@@ -110,31 +103,66 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       flex-direction: column;
       padding: 3rem;
 
-      
+      .number {
+        height: 12%;
+        width: 100%;
 
-      .icon{
-        font-size: 10vw;
-        color: #00246B;
+        .circle {
+          width: 11%;
+          font-size: 1.7vw;
+          height: 100%;
+          align-self: flex-start;
+          background-color: #00246B;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+        }
       }
-      .title{
+
+      .head-p {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         font-size: 2.1vw;
         color: black;
+      }
+
+      .cont-p {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        li {
+          list-style: none;
+          display: flex;
+          gap: 10px;
+          color: rgb(61, 61, 61);
+          font-size: 1.5vw;
+        }
       }
     }
   }
 }
 
 @media (max-width: 768px) {
-  .specialize{
+  .project{
 
-    .carousel-section{
+    .carousel-section-p{
 
-      .carousel-container{
+      .carousel-container-p{
         margin-top: 10vh;
 
-        .carousel-track{
+        .carousel-track-p{
 
-          .card{
+          .card-p{
             height: 400px;
             width: 400px;
             max-width: 95%;
@@ -146,13 +174,22 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
 
             
-            .card-content{
-              .icon{
-                font-size: 20vw;
+            .card-content-p{
+              .number{
+                height: 15%;
+                .circle{
+                  width:15%;
+                  font-size: 4vw;
+                }
               }
-              .title{
-                font-size: 4vw;
-                text-align: center;
+            }
+            .head-p{
+              font-size: 4vw;
+            }
+            .cont-p{
+
+              li{
+                font-size: 2.5vw;
               }
             }
           }
@@ -163,16 +200,16 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 480px) {
-  .specialize{
+  .project{
 
-    .carousel-section{
+    .carousel-section-p{
 
-      .carousel-container{
+      .carousel-container-p{
         margin-top: 10vh;
 
-        .carousel-track{
+        .carousel-track-p{
 
-          .card{
+          .card-p{
             height: 350px;
             width: 400px;
             max-width: 95%;
@@ -184,13 +221,22 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
 
             
-            .card-content{
-              .icon{
-                font-size: 30vw;
+            .card-content-p{
+              .number{
+                height: 15%;
+                .circle{
+                  width:15%;
+                  font-size: 4vw;
+                }
               }
-              .title{
-                font-size: 8vw;
-                text-align: center;
+            }
+            .head-p{
+              font-size: 5vw;
+            }
+            .cont-p{
+
+              li{
+                font-size: 3.5vw;
               }
             }
           }
@@ -200,16 +246,16 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
 }
 @media (min-width:768px) {
-  .specialize{
+  .project{
 
-    .carousel-section{
+    .carousel-section-p{
 
-      .carousel-container{
+      .carousel-container-p{
         margin-top: 10vh;
 
-        .carousel-track{
+        .carousel-track-p{
 
-          .card{
+          .card-p{
             height: 400px;
             width: 400px;
             max-width: 95%;
@@ -221,13 +267,22 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
 
             
-            .card-content{
-              .icon{
-                font-size: 10vw;
+            .card-content-p{
+              .number{
+                height: 15%;
+                .circle{
+                  width:15%;
+                  font-size: 2vw;
+                }
               }
-              .title{
-                font-size: 2.5vw;
-                text-align: center;
+            }
+            .head-p{
+              font-size: 2vw;
+            }
+            .cont-p{
+
+              li{
+                font-size: 1.3vw;
               }
             }
           }
