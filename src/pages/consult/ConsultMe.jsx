@@ -3,6 +3,7 @@ import NewNav from '../newnav/NewNav';
 import './consult.scss';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
+import Footer from '../footer/Footer';
 
 const icons = [
   { icon: <FaTwitter />, link: "https://twitter.com" },
@@ -90,6 +91,10 @@ const ConsultMe = () => {
           </div>
         </div>
       </div>
+      <div className="footer-c">
+        <Footer/>
+      </div>
+      
     </>
   );
 };
