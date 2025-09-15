@@ -91,9 +91,6 @@ const ConsultMe = () => {
           </div>
         </div>
       </div>
-      <div className="footer-c">
-        <Footer/>
-      </div>
       
     </>
   );
