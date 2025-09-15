@@ -1,9 +1,206 @@
-.consult{
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-;
+.consult {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  .formsec {
+    height: 85%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    .consultform {
+      width: 50%;
+      height: 80%;
+      border-radius: 30px;
+      color: white;
+      background-color: #1b2735;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        input,
+        textarea {
+          width: 80%;
+          padding: 12px;
+          border: none;
+          border-radius: 8px;
+          background-color: #000;
+          color: #fff;
+          font-size: 1rem;
+          outline: none;
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 200px;
+          max-height: 200px;
+        }
+
+        button {
+          padding: 12px;
+          border: none;
+          border-radius: 8px;
+          background-color: blue;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          width: 85%;
+        }
+
+        button:hover {
+          background-color: darkblue;
+        }
+      }
+
+      .submitted-message {
+        text-align: center;
+        h2 {
+          color: blue;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #ccc;
+        }
+      }
+    }
+
+    .consultdet {
+      width: 50%;
+      height: 80%;
+      background-color: #1b2735;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      padding: 20px;
+      border-radius: 30px;
+      text-align: center;
+      flex-direction: column;
+      gap: 50px;
+
+      .socialico {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+        display: flex;
+        gap: 20px;
+
+        .icons {
+          height: 100%;
+          width: 30%;
+          background-color: #00246b;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+
+          span {
+            height: 100%;
+            width: 100%;
+            font-size: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+          }
+        }
+      }
+
+      .logo-c {
+        height: 15%;
+        width: 80%;
+
+        .img {
+          height: 100%;
+          width: 25%;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .aboutme {
+        height: 40%;
+        width: 80%;
+        text-align: justify;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .consult .formsec {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .consultform,
+  .consultdet {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .consultform form input,
+  .consultform form textarea,
+  .consultform form button {
+    width: 90%;
+  }
+  .consultdet .aboutme {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .consult .formsec {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .consultform {
+    padding: 15px;
+  }
+
+  .consultdet {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .consultform form input,
+  .consultform form textarea,
+  .consultform form button {
+    width: 95%;
+  }
 }

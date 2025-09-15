@@ -4,7 +4,8 @@ import NewNav from '../newnav/NewNav'
 import { FaArrowTrendUp } from "react-icons/fa6";
 import Section from './Section';
 import Footer from '../footer/Footer';
-import Duration from '../duration/Duration';
+import Special from './special';
+import Durationc from './Durationc';
 
 const Courses = () => {
     const stars = Array.from({ length: 20 });
@@ -47,7 +48,8 @@ const Courses = () => {
         </div>
     </div>
     <Section/>
-    <Duration/>
+    <Special/>
+    <Durationc/>
     <Footer/>
     </>
   )

@@ -3,6 +3,9 @@ import './abt.scss';
 import NewNav from '../newnav/NewNav';
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { SiGooglescholar } from "react-icons/si";
+import Logos from './Logos';
+import Footer from '../footer/Footer'
+import Experience from '../experience/Experience'
 const social = [
   { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/yourusername/" },
   { icon: <FaTwitter />, url: "https://twitter.com/yourusername" },
@@ -47,6 +50,11 @@ const Abt = () => {
           </div>
         </div>
          </div>
+      </div>
+      <div className="part2-abt">
+      <Logos/>
+      <Experience/>
+      <Footer/>
       </div>
 
       

@@ -122,7 +122,7 @@ export default function Section({ scrollContainerRef }) {
   const trackWidth = trackRef.current.scrollWidth;
   const viewportWidth = window.innerWidth;
 
-  const card = trackRef.current.querySelector(".card-p");
+  const card = trackRef.current.querySelector(".card-c");
   const cardWidth = card ? card.offsetWidth : 800;
 
   const padding = (viewportWidth - cardWidth) / 2;
@@ -130,9 +130,12 @@ export default function Section({ scrollContainerRef }) {
   let distance = trackWidth - viewportWidth + padding;
 
   if (viewportWidth <= 480) {
-    distance *= 1.1; 
+    distance *= 1; 
   } else if (viewportWidth <= 768) {
     distance *= 1.1;
+  }
+  else{
+    distance*=1.2;
   }
 
   setScrollDistance(distance);
@@ -182,7 +185,7 @@ export default function Section({ scrollContainerRef }) {
   }, [scrollDistance, scrollContainerRef]);
 
   return (
-    <div className="project">
+    <div className="course-s">
 
       <section ref={sectionRef} className="carousel-section-p">
 
@@ -217,7 +220,7 @@ export default function Section({ scrollContainerRef }) {
             style={{ paddingLeft: `${sidePadding*2.5}px`, paddingRight: `${sidePadding}px` }}
           >
             {cards.map((card,id) => (
-              <div key={id} className="card-p">
+              <div key={id} className="card-c">
                 <div
                   className="card-image-p"
                 />

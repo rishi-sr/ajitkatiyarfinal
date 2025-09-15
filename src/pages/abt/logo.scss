@@ -1,0 +1,116 @@
+.container {
+  position: relative;
+  margin-top: 92vh;
+
+  .main {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1200px;
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+
+      .carousel-mask {
+        width: 100%;
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent 0, black 100px, black calc(100% - 100px), transparent 100%);
+
+        .carousel {
+          display: flex;
+          animation: infinite-scroll 20s linear infinite;
+          gap: 20px;
+
+          li {
+            margin: 0 1rem;
+            list-style: none;
+
+            img {
+              max-width: none;
+              width: 100px;
+              height: 100px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(90%);
+  }
+  100% {
+    transform: translateX(-90%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 70vh;
+
+    .main {
+      .wrapper {
+        .carousel-mask {
+          .carousel {
+            li {
+              img {
+                width: 80px;
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 60vh;
+
+    .main {
+      .wrapper {
+        .carousel-mask {
+          .carousel {
+            li {
+              img {
+                width: 60px;
+                height: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 90vh;
+
+    .main {
+      .wrapper {
+        .carousel-mask {
+          .carousel {
+            li {
+              img {
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

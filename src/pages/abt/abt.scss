@@ -69,43 +69,48 @@
     justify-content: center;
     z-index: 2;
 
-    .abt-data{
-        width: 90%;
-        height: 90%;
-         h1 {
-          font-size: 4vw;
-        }
+    .abt-data {
+      width: 90%;
+      height: 90%;
 
-        p {
-          font-size: 1.2vw;
-          margin-top: 10px;
-          line-height: 1.5;
-        }
-        .cards-abt{
+      h1 {
+        font-size: 4vw;
+      }
+
+      p {
+        font-size: 1.2vw;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+
+      .cards-abt {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 50px;
+        margin-top: 150px;
+
+        .card {
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          border-radius: 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          a {
+            font-size: 50px;
+            text-decoration: none;
+            color: #00246b;
+            margin: 0;
+            padding: 0;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            gap: 50px;
-            margin-top: 150px;
-            .card{
-                height: 100px;
-                width: 100px;
-                background-color: white;
-                border-radius: 20%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                a{
-                    font-size: 50px;
-                    text-decoration: none;
-                    color: #00246b;
-                    margin: 0;
-                    padding: 0;
-                }
-                
-            }
+            justify-content: center;
+          }
         }
+      }
     }
   }
 }
@@ -153,6 +158,10 @@
     }
   }
 }
+.part2-abt{
+  height: auto;
+  width: 100%;
+}
 
 @keyframes rotate-border {
   from {
@@ -171,5 +180,145 @@
   100% {
     transform: translateY(110vh);
     opacity: 0;
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+  .abt {
+    .img {
+      width: 50%;
+      .abt-img {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    .abt-text {
+      width: 50%;
+      .abt-data {
+        h1 {
+          font-size: 5vw;
+        }
+        p {
+          font-size: 1.5vw;
+        }
+        .cards-abt {
+          gap: 30px;
+          margin-top: 100px;
+          .card {
+            height: 80px;
+            width: 80px;
+            a {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .abt {
+    flex-direction: column;
+    .img {
+      width: 70%;
+      .abt-img {
+        height: 250px;
+        width: 250px;
+      }
+    }
+    .abt-text {
+      width: 80%;
+      .abt-data {
+        h1 {
+          font-size: 6vw;
+        }
+        p {
+          font-size: 1.7vw;
+        }
+        .cards-abt {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 50px;
+          .card {
+            height: 70px;
+            width: 70px;
+            a {
+              font-size: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .abt {
+    .img {
+      width: 100%;
+      .abt-img {
+        height: 200px;
+        width: 200px;
+      }
+    }
+    .abt-text {
+      width: 100%;
+      .abt-data {
+        h1 {
+          font-size: 7vw;
+        }
+        p {
+          font-size: 2vw;
+        }
+        .cards-abt {
+          gap: 15px;
+          margin-top: 30px;
+          .card {
+            height: 60px;
+            width: 60px;
+            a {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .abt {
+    .img {
+      width: 100%;
+      .abt-img {
+        height: 250px;
+        width: 250px;
+      }
+    }
+    .abt-text {
+      width: 100%;
+      .abt-data {
+        h1 {
+          font-size: 8vw;
+        }
+        p {
+          font-size: 2.5vw;
+        }
+        .cards-abt {
+          gap: 10px;
+          margin-top: 20px;
+          .card {
+            height: 50px;
+            width: 50px;
+            a {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
   }
 }
