@@ -185,34 +185,31 @@
     }
   }
 }
-@media (max-width:786px) {
-  .copyright-area{
+@media (max-width: 786px) {
+  .copyright-area {
     width: 100%;
-    .container{
-      .row{
+    .container {
+      .row {
         width: 90%;
-        .col{
-          .copyright-text{
-            p{
+        .col {
+          .copyright-text {
+            p {
               font-size: 10px;
             }
-
-            
           }
-
-          .footer-menu{
-            ul{
-
-              li{
-                a{
+          .footer-menu {
+            ul {
+              li {
+                a {
                   font-size: 12px;
                 }
               }
             }
           }
-          
         }
       }
     }
   }
+
+  
 }

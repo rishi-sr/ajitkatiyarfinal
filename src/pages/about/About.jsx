@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 import "./about.scss";
 
 const content = [""];
 const About = () => {
   const btnRef = useRef(null);
-  const finalText = "Download Resume";
+  const finalText = "Consult Me";
 
   // Controls for h1 animation
   const h1Controls = useAnimation();
@@ -77,7 +78,7 @@ const About = () => {
               innovative AI/ML solutions with 17+ years of IT leadership.
             </motion.h1>
 
-            <a ref={btnRef} className="resume-btn">{finalText}</a>
+            <Link to="/consultme" ref={btnRef} className="resume-btn">{finalText}</Link>
           </div>
         </div>
       </div>

@@ -165,71 +165,29 @@
   margin-top: 92vh;
 }
 
-@media screen and (max-width: 1200px) {
-  .abt {
-    .img {
-      width: 50%;
-      .abt-img {
-        height: 300px;
-        width: 300px;
-      }
-    }
-    .abt-text {
-      width: 50%;
-      .abt-data {
-        h1 {
-          font-size: 5vw;
-        }
-        p {
-          font-size: 1.5vw;
-        }
-        .cards-abt {
-          gap: 30px;
-          margin-top: 100px;
-          .card {
-            height: 80px;
-            width: 80px;
-            a {
-              font-size: 40px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 992px) {
-  .abt {
-    flex-direction: column;
-    .img {
-      width: 70%;
-      .abt-img {
-        height: 250px;
-        width: 250px;
+  .consult{
+
+    .formsec{
+
+      .consultform{
+        height: 50%;
       }
-    }
-    .abt-text {
-      width: 80%;
-      .abt-data {
-        h1 {
-          font-size: 6vw;
+      .consultdet{
+        gap: 15px;
+        height: 50%;
+        .logo-c{
+          width: 100%;
+          height: 10%;
         }
-        p {
-          font-size: 1.7vw;
+        .socialico{
+          height: 15%;
+          width: 100%;
         }
-        .cards-abt {
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 20px;
-          margin-top: 50px;
-          .card {
-            height: 70px;
-            width: 70px;
-            a {
-              font-size: 35px;
-            }
-          }
+        .aboutme{
+          height: 50%;
+          width: 100%;
         }
       }
     }
@@ -270,43 +228,7 @@
 
 @media screen and (max-width: 480px) {
   .consult{
-    height: 100vh;
-    padding-top: 15vh;
-    .formsec{
-      flex-direction: column-reverse;
-
-      .consultform{
-        width: 85%;
-        height: 80%;
-
-      }
-      .consultdet{
-        width: 85%;
-        height: 70%;
-        gap: 15px;
-        .logo-c{
-          width: 95%;
-        }
-
-        .socialico{
-          height: 40%;
-          
-
-          .icons{
-
-            span{
-              font-size: 5vw;
-              padding: 15px;
-            }
-          }
-        }
-        .aboutme{
-          width: 95%;
-        }
-      }
-    }
-  }
-  .footer-c{
-    margin-top: 117vh;
+    flex-direction: column-reverse;
+    padding-bottom: 100px;
   }
 }
