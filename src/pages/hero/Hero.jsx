@@ -40,7 +40,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="thumb" style={{ backgroundImage: "url('ajitkatiyar.jpg')" }}>
+    <div className="thumb" style={{ backgroundImage: "url('ajitkatiyar.png')" }}>
       {Array.from({ length: 2000 }).map((_, i) => (
         <motion.div
           key={i}

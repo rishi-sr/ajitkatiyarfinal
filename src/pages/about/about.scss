@@ -1,10 +1,10 @@
-$primary: #00246B;
+$primary: white;
 
 .about {
   min-height: 100vh;
-  border-radius: 50px 50px 0 0;
+  // border-radius: 50px 50px 0 0;
   width: 100%;
-  background-color: white;
+  // background: radial-gradient(circle at center, #2e0854 0%, #1a0b2e 50%, #000000 100%);
   display: flex;
   align-items: center;
   justify-content: center;

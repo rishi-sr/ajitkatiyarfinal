@@ -5,7 +5,7 @@ $text-white: #ffffff;
 $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
 .project {
-  background-color: white;
+  // background: radial-gradient(circle at center, #2e0854 0%, #1a0b2e 50%, #000000 100%);
   color: $text-light;
 
   .carousel-section-p {
@@ -43,14 +43,14 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         flex-direction: column;
 
         h1 {
-          color: black;
+          color: white;
           font-size: 5vw;
           padding: 6px;
           margin: 0;
         }
 
         h3 {
-          color: #00246B;
+          color: #f9f1ff;
           font-size: 2vw;
         }
       }
@@ -76,11 +76,11 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     background-color: white;
     border-radius: 30px;
     cursor: pointer;
-    border-left: 8px solid #00246Bb8;
+    border-left: 8px solid #5500ab;
     box-shadow: 0 0 10px 0px black;
     
     &:hover {
-      box-shadow: 0 0 20px 5px #00246B;
+      box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.286);
       transform: translateY(-5px);
     }
 
@@ -101,16 +101,49 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       flex-direction: column;
       padding: 3rem;
 
+      .hoverc{
+        position: absolute;
+        top:0px;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        opacity: 0;
+
+        button{
+          padding:10px 20px;
+          border:none;
+          border-radius:8px;
+          background-color:#5a14a0;
+          color:white;
+          font-size:1.2vw;
+          cursor:pointer;
+          transition:background-color 0.3s ease;
+
+          a{
+            text-decoration:none;
+            color:white;
+          }
+
+          &:hover{
+            background-color:#2e0854;
+          }
+        }
+      }
+
       .number {
         height: 12%;
         width: 100%;
 
         .circle {
           width: 11%;
-          font-size: 1.7vw;
+          font-size: 1.5vw;
           height: 100%;
           align-self: flex-start;
-          background-color: #00246B;
+          background-color: #2e0854;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -144,6 +177,13 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
           gap: 10px;
           color: rgb(61, 61, 61);
           font-size: 1.5vw;
+        }
+      }
+
+      &:hover{
+        .hoverc{
+          opacity:1;
+          transition:opacity 0.3s ease;
         }
       }
     }

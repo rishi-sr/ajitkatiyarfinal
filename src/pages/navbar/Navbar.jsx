@@ -12,7 +12,7 @@
       <>
         <div className="navbar">
           <div className="img">
-            <img src="ak1.png" alt="Logo" />
+            <img src="ak.png" alt="Logo" />
           </div>
           <div className="hamburger" onClick={toggleMenu}>
             <div className={`line line1 ${isOpen ? "open" : ""}`}></div>
@@ -24,10 +24,10 @@
           <div className="menu-content">
             <h2>Menu</h2>
             <ul>
-              <a><Link to="/">Home</Link></a>
-              <a><Link to="/about">About</Link></a>
-              <a><Link to="/course">Courses</Link></a>
-              <a><Link to="/consultme">Consult Me</Link></a>
+              <a onClick={toggleMenu}><Link to="/">Home</Link></a>
+              <a onClick={toggleMenu}><Link to="/about">About</Link></a>
+              <a onClick={toggleMenu}><Link to="/course">Courses</Link></a>
+              <a onClick={toggleMenu}><Link to="/consultme">Consult Me</Link></a>
             </ul>
           </div>
         </div>

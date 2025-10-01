@@ -1,13 +1,13 @@
 .container {
   position: relative;
   margin-top: 92vh;
+  // background: radial-gradient(circle at center, #2e0854 0%, #1a0b2e 50%, #000000 100%);
 
   .main {
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     overflow: hidden;
 
     .wrapper {

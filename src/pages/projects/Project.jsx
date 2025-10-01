@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import "./project.scss";
 import { motion } from "framer-motion";
 import {ReactTyped} from "react-typed";
+import { Link } from "react-router-dom";
 
 
 const cards = [
@@ -222,6 +223,9 @@ export default function Project({ scrollContainerRef }) {
                   className="card-image-p"
                 />
                 <div className="card-content-p">
+                  <div className="hoverc">
+                    <button><Link to="/course">Know More</Link></button>
+                  </div>
                   <div className="number">
                     <div className="circle">{card.id}</div>
                   </div>

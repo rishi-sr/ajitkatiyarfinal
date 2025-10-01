@@ -13,17 +13,18 @@ $font-main: 'Syne';
   padding-top: 8vh;
   z-index: 0;
   
+  
 
   .box {
     width: 35px;
     height: 35px;
     transition: border-color 1s ease;
-    border: 1.5px solid rgba(46, 45, 45, 0.03);
+    // border: 1.5px solid rgba(46, 45, 45, 0.03);
     z-index: 3;
   }
 
   .glow {
-    border: 1.8px solid #00246b;
+    border: 1.8px solid #2e0854;
   }
 
   .name {
@@ -36,7 +37,7 @@ $font-main: 'Syne';
     font-family: $font-main;
     letter-spacing: 2px;
     z-index: 4;
-    color: #00246B;
+    color: #2e0854;
   }
 
   h1 {
@@ -46,7 +47,7 @@ $font-main: 'Syne';
     bottom: 20%;
     left: 52%;
     transform: translate(-50%, -50%);
-    color: black;
+    color: white;
     font-size: 4.1vw;
     font-family: $font-main;
     letter-spacing: 2px;
@@ -54,7 +55,7 @@ $font-main: 'Syne';
 
     span {
       color: transparent;
-      -webkit-text-stroke: 1px black;
+      -webkit-text-stroke: 1px white;
     }
   }
 
@@ -63,7 +64,7 @@ $font-main: 'Syne';
     bottom: 15%;
     left: 26%;
     transform: translate(-50%, -50%);
-    color: black;
+    color: white;
     font-size: 1.05vw;
     font-family: $font-main;
     letter-spacing: 2px;
@@ -76,7 +77,7 @@ $font-main: 'Syne';
     bottom: 18%;
     left: 96%;
     transform: translate(-50%, -50%);
-    color: black;
+    color: white;
     font-size: 1.5vw;
     font-family: $font-main;
     letter-spacing: 2px;

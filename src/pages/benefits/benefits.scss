@@ -5,13 +5,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 20vh;
-  background-color: black;
-
-  /* Grid background */
-  background-image: 
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px;
+  // background: radial-gradient(circle at center, #2e0854 0%, #1a0b2e 50%, #000000 100%);
 
   .cards-d {
     width: 90%;
@@ -24,7 +18,7 @@
     .demhead {
       height: auto;
       font-size: clamp(1.5rem, 2vw, 2.5rem);
-      color: #00246B;
+      color: white;
       text-align: center;
       margin-bottom: 2rem;
     }
@@ -51,7 +45,7 @@
         height: clamp(180px, 16vw, 280px);
 
         .icon {
-          color: #00246B;
+          color: #2e0854;
           font-size: clamp(2rem, 4vw, 3.5rem);
           margin-bottom: 0.8rem;
         }

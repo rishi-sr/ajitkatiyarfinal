@@ -48,10 +48,10 @@ const About = () => {
 
   useEffect(() => {
     if (inView) {
-      h1Controls.start({ color: "#000", transition: { duration: 0.8 } });
+      h1Controls.start({ color: "#ffffff", transition: { duration: 0.8 } });
       maskControls.start({ scale: 1, transition: { duration: 0.8 } });
     } else {
-      h1Controls.start({ color: "#333", transition: { duration: 0.8 } });
+      h1Controls.start({ color: "#ffffff", transition: { duration: 0.8 } });
       maskControls.start({ scale: 0.8, transition: { duration: 0.8 } });
     }
   }, [inView, h1Controls, maskControls]);
@@ -60,19 +60,15 @@ const About = () => {
     <div className="about">
       <div className="abt-part1">
         <div className="box">
-          <div className="img" style={{ backgroundImage: "url('ajitkatiyar1.png')" }}>
-            <div
-              className="img2 shrink"
-              style={{ backgroundImage: "url('mask.jpg')" }}
-                
-            />
+          <div className="img" style={{ backgroundImage: "url('ajitkatiyar1.jpg')" }}>
+            
           </div>
           <div className="details">
             <h3>ABOUT ME</h3>
             <motion.h1
               ref={ref}
               animate={h1Controls}
-              initial={{ color: "#333" }}
+              initial={{ color: "#ffffff" }}
             >
               Generative AI and Data Science expertise – crafting scalable,
               innovative AI/ML solutions with 17+ years of IT leadership.

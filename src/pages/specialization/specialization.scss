@@ -6,23 +6,9 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
 .specialize {
   color: $text-light;
-  animation: changecolor both;
-  animation-timeline: view();
-  animation-range: entry 40% cover 40%;
-
-  background-image: 
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 30px 30px; 
-
-  @keyframes changecolor {
-  from{
-    background-color: white;
-  }
-  to{
-    background-color: black;
-  }
-}
+  // animation: changecolor both;
+  // animation-timeline: view();
+  // animation-range: entry 40% cover 40%;
 
   .carousel-section {
     position: relative;
@@ -59,7 +45,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         flex-direction: column;
 
         h3 {
-          color: #00246B;
+          color: white;
           font-size: 5vw;
         }
       }
@@ -85,11 +71,11 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     background-color: white;
     border-radius: 30px;
     cursor: pointer;
-    border-left: 8px solid #00246Bb8;
+    border-left: 8px solid #5500ab;
     box-shadow: 0 0 10px 0px black;
     
     &:hover {
-      box-shadow: 0 0 20px 5px #00246B;
+      box-shadow: 0 0 20px 5px white;
       transform: translateY(-5px);
     }
 
@@ -114,7 +100,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
       .icon{
         font-size: 10vw;
-        color: #00246B;
+        color: #2e0854;
       }
       .title{
         font-size: 2.1vw;
@@ -140,7 +126,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             max-width: 95%;
 
             &:hover {
-              box-shadow: 0 0 10px 5px #00246B85;
+              box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.286);
               transform: translateY(-5px);
             }
 
@@ -178,7 +164,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             max-width: 95%;
 
             &:hover {
-              box-shadow: 0 0 10px 5px #00246B85;
+              box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.286);
               transform: translateY(-5px);
             }
 
@@ -215,7 +201,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             max-width: 95%;
 
             &:hover {
-              box-shadow: 0 0 10px 5px #00246B85;
+              box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.286);
               transform: translateY(-5px);
             }
 
