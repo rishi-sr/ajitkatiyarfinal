@@ -12,7 +12,7 @@
       <>
         <div className="navbar-new">
           <div className="img">
-            <img src="ak.png" alt="Logo" />
+            <Link to="/"><img src="ak.png" alt="Logo" /></Link>
           </div>
           <div className="hamburger" onClick={toggleMenu}>
             <div className={`line line1 ${isOpen ? "open" : ""}`}></div>
