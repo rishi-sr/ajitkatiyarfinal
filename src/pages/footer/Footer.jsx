@@ -81,19 +81,13 @@ const Footer = () => {
             <div className="col">
               <div className="copyright-text">
                 <p>
-                  Copyright &copy; 2025, All Rights Reserved Ajit Katiyar
+                  Copyright &copy; 2025, All Rights Reserved Purpul Digital | Developed by Purpul Digital
                 </p>
               </div>
             </div>
             <div className="col">
               <div className="footer-menu">
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href=""><Link to="/about">About</Link></a></li>
-                  <li><a href="#">Project</a></li>
-                  <li><a href="#">Experience</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
+                
               </div>
             </div>
           </div>
