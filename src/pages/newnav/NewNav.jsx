@@ -24,10 +24,10 @@
           <div className="menu-content">
             <h2>Menu</h2>
             <ul>
-              <a><Link to="/">Home</Link></a>
-                            <a><Link to="/about">About</Link></a>
-                            <a><Link to="/course">Courses</Link></a>
-                            <a><Link to="/consultme">Consult Me</Link></a>
+              <a><Link to="/" onClick={toggleMenu}>Home</Link></a>
+              <a><Link to="/about" onClick={toggleMenu}>About</Link></a>
+              <a><Link to="/course" onClick={toggleMenu}>Courses</Link></a>
+              <a><Link to="/consultme" onClick={toggleMenu}>Consult Me</Link></a>
             </ul>
           </div>
         </div>
