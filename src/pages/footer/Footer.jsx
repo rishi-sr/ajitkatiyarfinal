@@ -64,7 +64,7 @@ const Footer = () => {
                   <p>Get the support you need! Click here for consultancy services.</p>
                 </div>
                 <div className="subscribe-form">
-                  <button className="btn1">Consult Me
+                  <button className="btn1-foot">Consult Me
                   </button>
                     <button className="btn2"></button>
                 </div>

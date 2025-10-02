@@ -37,7 +37,8 @@ $font-main: 'Syne';
     font-family: $font-main;
     letter-spacing: 2px;
     z-index: 4;
-    color: #2e0854;
+    color: rgb(187, 187, 187);
+    font-weight: 600;
   }
 
   h1 {
@@ -169,12 +170,21 @@ $font-main: 'Syne';
             transform: translate(-50%, -50%);
             font-size: 4vw;
             text-align: center;
+            background-color: #2e0854;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5vh;
+            padding: 0.3vh 2vh;
+            border-radius: 10px;
         }
         h1{
             top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 7vw;
+            margin-top: 6vh;
         }
         .description{
             top: 72%;
