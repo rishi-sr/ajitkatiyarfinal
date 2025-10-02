@@ -160,8 +160,9 @@ $font-main: 'Syne';
 }
 @media (max-width:768px) {
     .thumb{
+        background-image: url();
         background-size: cover;
-        background-position: center;
+        background-position:center;
         .name{
             top: 45%;
             left: 50%;

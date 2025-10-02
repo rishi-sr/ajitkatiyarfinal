@@ -1,16 +1,31 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./hero.scss";
 
 const Hero = () => {
   const [activeBoxes, setActiveBoxes] = useState([]);
+  const [bgImage, setBgImage] = useState("ajitkatiyar.png");
   const hireRef = useRef(null);
   const originalText = "Consult Me!";
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+  useEffect(() => {
+    const updateImage = () => {
+      if (window.innerWidth < 768) {
+        setBgImage("ajitkm.png");
+      } else {
+        setBgImage("ajitkatiyar.png");
+      }
+    };
+
+    updateImage(); // run on mount
+    window.addEventListener("resize", updateImage);
+
+    return () => window.removeEventListener("resize", updateImage);
+  }, []);
+
   const handleEnter = (i) => {
     setActiveBoxes((prev) => [...prev, i]);
-
     setTimeout(() => {
       setActiveBoxes((prev) => prev.filter((id) => id !== i));
     }, 800);
@@ -36,11 +51,11 @@ const Hero = () => {
           hireRef.current.innerText = originalText;
         }
       }
-    }, 30); 
+    }, 30);
   };
 
   return (
-    <div className="thumb" style={{ backgroundImage: "url('ajitkatiyar.png')" }}>
+    <div className="thumb" style={{ backgroundImage: `url(${bgImage})` }}>
       {Array.from({ length: 2000 }).map((_, i) => (
         <motion.div
           key={i}
