@@ -14,6 +14,7 @@ const social = [
 ];
 
 const Abt = () => {
+  
   const stars = Array.from({ length: 20 });
 
   return (
@@ -43,7 +44,7 @@ const Abt = () => {
           <p>Hi, I’m Ajit Kumar — an AI/ML and Data Science expert with over 17 years of experience in delivering innovative solutions across industries like telecom, finance, healthcare, and agriculture. I specialize in designing and deploying scalable AI systems using frameworks like TensorFlow, PyTorch, and Langchain. With hands-on experience in generative models, LLMs, and cloud platforms like AWS, I’m passionate about transforming ideas into intelligent applications that solve real-world problems and drive business growth.</p>
           <div className="cards-abt">
             {social.map((social, id)=>(
-            <div className="s_card" key={id}>
+            <div className=" card s_card" key={id}>
               <a href={social.url}>{social.icon}</a>
             </div>
             ))}

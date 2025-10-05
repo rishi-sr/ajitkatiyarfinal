@@ -50,9 +50,9 @@ const Hero = () => {
           <p>AI meets Innovation – Generative AI, LLMs, and Machine Learning delivered with impact.</p>
         </div>
         <div className="consultbtn">
-          <button ref={hireRef} onMouseEnter={scrambleText}>
-            <Link to="/consult">{originalText}</Link>
-          </button>
+          <Link to="/consultme"><button ref={hireRef} onMouseEnter={scrambleText}>
+            {originalText}
+          </button></Link>
         </div>
       </div>
       <div className="thumb-image">

@@ -2,7 +2,14 @@ import React from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // makes it smooth
+    });
+  };
   return (
     <footer className="footer-section">
       <div className="container">
@@ -47,9 +54,9 @@ const Footer = () => {
                   <h3>Useful Links</h3>
                 </div>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Experience</a></li>
+                  <li><Link to='/' onClick={scrollToTop}>Home</Link></li>
+                  <li><Link to='about' onClick={scrollToTop}>About</Link></li>
+                  <li><Link to='course' onClick={scrollToTop}>Courses</Link></li>
                 </ul>
               </div>
             </div>

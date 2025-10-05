@@ -3,6 +3,12 @@
   import { Link } from 'react-router-dom';
   
   const Navbar = () => {
+    const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // makes it smooth
+    });
+  };
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -25,10 +31,10 @@
           <div className="menu-content">
             <h2>Menu</h2>
             <ul>
-              <a onClick={toggleMenu}><Link to="/">Home</Link></a>
-              <a onClick={toggleMenu}><Link to="/about">About</Link></a>
-              <a onClick={toggleMenu}><Link to="/course">Courses</Link></a>
-              <a onClick={toggleMenu}><Link to="/consultme">Consult Me</Link></a>
+              <a onClick={toggleMenu}><Link to="/" onClick={scrollToTop}>Home</Link></a>
+              <a onClick={toggleMenu}><Link to="/about" onClick={scrollToTop}>About</Link></a>
+              <a onClick={toggleMenu}><Link to="/course" onClick={scrollToTop}>Courses</Link></a>
+              <a onClick={toggleMenu}><Link to="/consultme" onClick={scrollToTop}>Consult Me</Link></a>
             </ul>
           </div>
         </div>

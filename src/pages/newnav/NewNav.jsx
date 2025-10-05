@@ -2,10 +2,17 @@
   import './newnav.scss';
   import { Link } from 'react-router-dom';
   const NewNav = () => {
+    const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // makes it smooth
+    });
+  };
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
       setIsOpen(!isOpen);
+
     };
 
     return (
@@ -24,10 +31,10 @@
           <div className="menu-content">
             <h2>Menu</h2>
             <ul>
-              <a><Link to="/" onClick={toggleMenu}>Home</Link></a>
-              <a><Link to="/about" onClick={toggleMenu}>About</Link></a>
-              <a><Link to="/course" onClick={toggleMenu}>Courses</Link></a>
-              <a><Link to="/consultme" onClick={toggleMenu}>Consult Me</Link></a>
+              <a><Link to="/" onClick={() => {toggleMenu(); scrollToTop();}}>Home</Link></a>
+              <a><Link to="/about" onClick={() => {toggleMenu(); scrollToTop();}}>About</Link></a>
+              <a><Link to="/course" onClick={() => {toggleMenu(); scrollToTop();}}>Courses</Link></a>
+              <a><Link to="/consultme" onClick={() => {toggleMenu(); scrollToTop();}}>Consult Me</Link></a>
             </ul>
           </div>
         </div>
