@@ -40,8 +40,7 @@ const Footer = () => {
                 <div className="footer-social-icon">
                   <span>Follow us</span>
                   <a href="#"><i className="fab fa-twitter twitter-bg"></i></a>
-                  <a href="#"><i class="fa-brands fa-google-scholar"></i></a>
-                  <a href="#"><i className="fab fa-linkedin-in linkedin-bg"></i></a>
+                  <a href="https://www.linkedin.com/in/ajit-kumar-7a303713/"><i className="fab fa-linkedin-in linkedin-bg"></i></a>
 
                 </div>
               </div>
@@ -71,9 +70,11 @@ const Footer = () => {
                   <p>Get the support you need! Click here for consultancy services.</p>
                 </div>
                 <div className="subscribe-form">
-                  <button className="btn1-foot">Consult Me
-                  </button>
+                    <button className="btn1-foot">Consult Me
+                    </button>
+                  <Link to="/consultme">
                     <button className="btn2"></button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -87,7 +87,17 @@
   z-index: 0;
   align-items: center;
   justify-content: center;
+  // background: radial-gradient(circle at center, #2e0854 10%, #1a0b2ea2 100%, #10031f 100%);
   
+  .bg{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: -100px;
+    opacity: 0.3;
+  }
   .thumb-content{
     width: 50%;
     height: 100%;
@@ -100,7 +110,7 @@
 
     .name{
         font-size: 1vw;
-        color: #5224a7;
+        color: #f1eaff;
     }
     .title{
         font-size: 2vw;

@@ -1,0 +1,99 @@
+.projects {
+  padding: 80px 8%;
+  color: #f4f4f4;
+  font-family: 'syne';
+  z-index: 10;
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #2e0854;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .project-card {
+    background: #10002b;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+
+    h3 {
+      color: #a6a6a6;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 8px;
+
+      strong {
+        color: #a6a6a6;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(65, 0, 231, 0.25);
+    }
+  }
+
+  .enterprise-info {
+    margin-top: 80px;
+    background: #10002b;
+    border-radius: 16px;
+    padding: 40px;
+    font-family: 'syne';
+    box-shadow: 0 5px 30px #00000043;
+
+    h3 {
+      color: #a6a6a6;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 25px;
+      line-height: 1.7;
+      font-family: 'syne';
+
+      li{
+        font-family: 'syne';
+      }
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 5%;
+    .project-card {
+      padding: 20px;
+    }
+  }
+}

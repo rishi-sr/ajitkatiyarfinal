@@ -4,42 +4,25 @@ import {ReactTyped} from "react-typed";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const hireRef = useRef(null);
-  const originalText = "Consult ME";
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  
 
-  const scrambleText = () => {
-    let count = 0;
-    const textLength = originalText.length;
-
-    const interval = setInterval(() => {
-      const scrambled = Array.from({ length: textLength })
-        .map(() => letters[Math.floor(Math.random() * letters.length)])
-        .join("");
-
-      if (hireRef.current) hireRef.current.innerText = scrambled;
-
-      count++;
-      if (count >= textLength) {
-        clearInterval(interval);
-        if (hireRef.current) hireRef.current.innerText = originalText;
-      }
-    }, 30);
-  };
 
   return (
     <>
     <div className="stars"></div>
     <div className="shooting-stars"></div>
     <div className="thumb">
+      <div className="bg">
+        <img src="bg.png" alt="" />
+      </div>
       <div className="thumb-content">
         <div className="name">
-          <h2>Hi! <br />I am Ajit Katiyar</h2>
+          <h2>Hi! <br />I am Ajit</h2>
         </div>
         <div className="title">
           <h1>
             <ReactTyped 
-              strings={["Generative AI", "Machine Learning"]} 
+              strings={["Generative AI", "Machine Learning", "Agentic AI"]} 
               typeSpeed={100} 
               backSpeed={50} 
               loop 
@@ -50,8 +33,8 @@ const Hero = () => {
           <p>AI meets Innovation – Generative AI, LLMs, and Machine Learning delivered with impact.</p>
         </div>
         <div className="consultbtn">
-          <Link to="/consultme"><button ref={hireRef} onMouseEnter={scrambleText}>
-            {originalText}
+          <Link to="/consultme"><button >
+            Consult Me
           </button></Link>
         </div>
       </div>
