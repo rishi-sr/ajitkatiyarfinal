@@ -245,6 +245,18 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       .carousel-container-p{
         margin-top: 10vh;
 
+        .spacer{
+          .header{
+            
+            h1{
+              font-size: 5.5vw;
+            }
+            h3{
+              font-size: 4vw;
+            }
+          }
+        }
+
         .carousel-track-p{
 
           .card-p{
@@ -269,12 +281,12 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
               }
             }
             .head-p{
-              font-size: 5vw;
+              font-size: 6vw;
             }
             .cont-p{
 
               li{
-                font-size: 3.5vw;
+                font-size: 3.9vw;
               }
             }
           }
