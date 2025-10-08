@@ -71,7 +71,7 @@ const About = () => {
               initial={{ color: "#ffffff" }}
             >
               Generative AI and Data Science expertise – crafting scalable,
-              innovative AI/ML solutions with 17+ years of IT leadership.
+              innovative AI/ML solutions with 19+ years of IT leadership.
             </motion.h1>
 
             <Link to="/consultme" ref={btnRef} className="resume-btn">{finalText}</Link>
