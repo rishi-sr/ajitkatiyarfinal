@@ -66,7 +66,7 @@
                 width: 150px;
                 background-color: #002671;
                 border-radius: 30px;
-                background-image: url("ml.jpg");
+                // background-image: url("ml.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -87,13 +87,16 @@
                 height: 100%;
                 width: 150px;
                 background-color: #002671;
-                background-image: url("ds1.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
+                
             }
             .im{
                 box-shadow: 0 0 10px 2px #00246b57;
+
+                img{
+                  height: 100%;
+                  width: 100%;
+                  border-radius: 30px;
+                }
             }
             }
         }

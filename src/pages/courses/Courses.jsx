@@ -38,9 +38,15 @@ const Courses = () => {
             </div>
             <div className="imag">
                 <div className="area-img">
-                    <div className="im img"></div>
-                <div className="img2 im"></div>
-                <div className="img3 im"></div>
+                    <div className="im img">
+                      <img src="ml.jpg" alt="" />
+                    </div>
+                <div className="img2 im">
+                  <img src="ds.jpg" alt="" />
+                </div>
+                <div className="img3 im">
+                  <img src="ds1.jpg" alt="" />
+                </div>
                 </div>
             </div>
             </div>
