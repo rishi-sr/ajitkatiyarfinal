@@ -272,6 +272,13 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
             
             .card-content-p{
+              .hoverc{
+                button{
+                  height: 3rem;
+                  width: 7rem;
+                  font-size: 0.7rem;
+                }
+              }
               .number{
                 height: 15%;
                 .circle{
@@ -328,6 +335,72 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             }
             .head-p{
               font-size: 2vw;
+            }
+            .cont-p{
+
+              li{
+                font-size: 1.3vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width:1920px){
+  .project{
+
+    .carousel-section-p{
+
+      .carousel-container-p{
+        margin-top: 10vh;
+
+        .spacer{
+          .header{
+            
+            h1{
+              font-size: 5.5vw;
+            }
+            h3{
+              font-size: 4vw;
+            }
+          }
+        }
+
+        .carousel-track-p{
+
+          .card-p{
+            height: 550px;
+            width: 500px;
+            max-width: 95%;
+
+            &:hover {
+              box-shadow: 0 0 10px 5px #00246B85;
+              transform: translateY(-5px);
+            }
+
+
+            
+            .card-content-p{
+              .hoverc{
+                button{
+                  height: 3rem;
+                  width: 7rem;
+                  font-size: 0.7rem;
+                }
+              }
+              .number{
+                height: 15%;
+                .circle{
+                  width:18%;
+                  font-size: 3vw;
+                }
+              }
+            }
+            .head-p{
+              font-size: 2vw;
+              font-weight: 700;
             }
             .cont-p{
 
