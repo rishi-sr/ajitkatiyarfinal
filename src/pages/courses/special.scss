@@ -219,3 +219,49 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
   }
 }
+@media screen and (min-width:1920px) {
+  .special{
+
+    .carousel-section{
+
+      .carousel-container{
+        margin-top: 10vh;
+        .spacer{
+
+          .header{
+
+            h3{
+              font-size: 7vw;
+            }
+          }
+        }
+
+        .carousel-track{
+
+          .card{
+            height: 550px;
+            width: 500px;
+            max-width: 95%;
+
+            &:hover {
+              box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.286);
+              transform: translateY(-5px);
+            }
+
+
+            
+            .card-content{
+              .icon{
+                font-size: 10vw;
+              }
+              .title{
+                font-size: 3vw;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

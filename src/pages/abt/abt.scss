@@ -18,8 +18,8 @@
 
     .abt-img {
       --border-angle: 0deg;
-      height: 400px;
-      width: 400px;
+      height: 60%;
+      width: 80%;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -209,7 +209,6 @@
   }
 }
 
-/* Your responsive media queries remain unchanged */
 
 @media screen and (max-width: 1200px) {
   .abt {
@@ -350,11 +349,12 @@
   }
 }
 @media screen and (min-height:1920px) {
-  .abt{
-    .img{
-      height: 100%;
-      .abt-img{
-        height: 900px;
+  .abt {
+    .img {
+      width: 50%;
+      .abt-img {
+        height: 300px;
+        width: 300px;
       }
     }
   }

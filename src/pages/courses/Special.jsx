@@ -52,92 +52,92 @@ export default function Special({ scrollContainerRef }) {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setInView(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            setInView(true);
+          }
+        },
+        { threshold: 0.3 }
+      );
+  
       if (headerRef.current) {
-        observer.unobserve(headerRef.current);
+        observer.observe(headerRef.current);
       }
-    };
-  }, []);
-
-  useEffect(() => {
-    function calculateSizes() {
-  if (!trackRef.current || !sectionRef.current) return;
-
-  const trackWidth = trackRef.current.scrollWidth;
-  const viewportWidth = window.innerWidth;
-
-  const card = trackRef.current.querySelector(".card");
-  const cardWidth = card ? card.offsetWidth : 800;
-
-  const padding = (viewportWidth - cardWidth) / 2;
-
-  let distance = trackWidth - viewportWidth + padding;
-
-  if (viewportWidth <= 480) {
-    distance *= 1.2; 
-  } else if (viewportWidth <= 768) {
-    distance *= 1.1;
-  }
-
-  setScrollDistance(distance);
-  setSidePadding(padding);
-
-  sectionRef.current.style.height = `${distance + window.innerHeight}px`;
-}
-
-
-
-    calculateSizes();
-    window.addEventListener("resize", calculateSizes);
-    return () => window.removeEventListener("resize", calculateSizes);
-  }, []);
-
-  useEffect(() => {
-    const scrollEl = scrollContainerRef?.current || window;
-    const track = trackRef.current;
-    const section = sectionRef.current;
-
-    if (!track || !section || !scrollEl) return;
-
-    function onScroll() {
-      if (scrollDistance === 0) return;
-
-      const rect = section.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const scrollableHeight = section.offsetHeight - viewportHeight;
-
-      if (scrollableHeight <= 0) return;
-
-      if (rect.top <= 0 && rect.bottom >= viewportHeight) {
-        const progress = Math.min(1, Math.max(0, -rect.top / scrollableHeight));
-        
-        track.style.transform = `translateX(${-progress * scrollDistance}px)`;
-      } else if (rect.top > 0) {
-        track.style.transform = `translateX(0px)`;
-      } else {
-        track.style.transform = `translateX(${-scrollDistance}px)`;
-      }
+  
+      return () => {
+        if (headerRef.current) {
+          observer.unobserve(headerRef.current);
+        }
+      };
+    }, []);
+  
+    useEffect(() => {
+      function calculateSizes() {
+    if (!trackRef.current || !sectionRef.current) return;
+  
+    const trackWidth = trackRef.current.scrollWidth;
+    const viewportWidth = window.innerWidth;
+  
+    const card = trackRef.current.querySelector(".card");
+    const cardWidth = card ? card.offsetWidth : 800;
+  
+    const padding = (viewportWidth - cardWidth) / 2;
+  
+    let distance = trackWidth - viewportWidth + padding;
+  
+    if (viewportWidth <= 480) {
+      distance *= 1.2; 
+    } else if (viewportWidth <= 768) {
+      distance *= 1.1;
     }
-
-    scrollEl.addEventListener("scroll", onScroll);
-    onScroll();
-
-    return () => scrollEl.removeEventListener("scroll", onScroll);
-  }, [scrollDistance, scrollContainerRef]);
-
+  
+    setScrollDistance(distance);
+    setSidePadding(padding);
+  
+    sectionRef.current.style.height = `${distance + window.innerHeight}px`;
+  }
+  
+  
+  
+      calculateSizes();
+      window.addEventListener("resize", calculateSizes);
+      return () => window.removeEventListener("resize", calculateSizes);
+    }, []);
+  
+    useEffect(() => {
+      const scrollEl = scrollContainerRef?.current || window;
+      const track = trackRef.current;
+      const section = sectionRef.current;
+  
+      if (!track || !section || !scrollEl) return;
+  
+      function onScroll() {
+        if (scrollDistance === 0) return;
+  
+        const rect = section.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const scrollableHeight = section.offsetHeight - viewportHeight;
+  
+        if (scrollableHeight <= 0) return;
+  
+        if (rect.top <= 0 && rect.bottom >= viewportHeight) {
+          const progress = Math.min(1, Math.max(0, -rect.top / scrollableHeight));
+          
+          track.style.transform = `translateX(${-progress * scrollDistance}px)`;
+        } else if (rect.top > 0) {
+          track.style.transform = `translateX(0px)`;
+        } else {
+          track.style.transform = `translateX(${-scrollDistance}px)`;
+        }
+      }
+  
+      scrollEl.addEventListener("scroll", onScroll);
+      onScroll();
+  
+      return () => scrollEl.removeEventListener("scroll", onScroll);
+    }, [scrollDistance, scrollContainerRef]);
+  
   return (
     <div className="special">
 
