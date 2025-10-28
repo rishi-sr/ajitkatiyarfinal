@@ -1,8 +1,12 @@
-.course{
+ .course{
     height: auto;
     width: 100%;
     position: absolute;
     top: 0;
+
+    .night{
+      opacity: 0.2;
+    }
     // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
     .c-head{
@@ -273,17 +277,7 @@
     scale: 1.2;
   }
 }
-@media screen and (max-width: 1200px) {
-  .course .c-head .c-part1 .c-content .textarea h1 {
-    font-size: 4vw;
-  }
-  .course .c-head .c-part1 .c-content {
-    width: 60%;
-  }
-  .course .c-head .imag {
-    width: 40%;
-  }
-}
+
 
 @media screen and (max-width: 992px) {
   .course .c-head .c-part1 {
@@ -355,5 +349,160 @@
   .course .c-head .imag .area-img .img3 {
     width: 70px;
     height: 70px;
+  }
+}
+
+@media (max-width:320px) {
+  .course{
+
+    .c-head{
+
+      .c-part1{
+        height: 100%;
+
+        .textarea{
+
+          .enroll{
+            width: 100%;
+
+          }
+        }
+        .imag{
+        display: none;
+      }
+      }
+    }
+  }
+}
+@media (min-width:320px) and (max-width:376px) {
+  .course{
+
+    .c-head{
+
+      .c-part1{
+        height: 100%;
+
+        .textarea{
+
+          .enroll{
+            width: 100%;
+
+          }
+        }
+        .imag{
+        display: none;
+      }
+      }
+    }
+  }
+}
+@media (min-width:376px) and (max-width:426px) {
+  .course{
+
+    .c-head{
+
+      .c-part1{
+        height: 100%;
+
+        .textarea{
+
+          .enroll{
+            width: 100%;
+
+          }
+        }
+        .imag{
+        display: none;
+      }
+      }
+    }
+  }
+}
+@media (min-width:426px) and (max-width:768px) {
+  .course{
+
+    .c-head{
+
+      .c-part1{
+        height: 130%;
+
+        .textarea{
+          margin-top: 30vh;
+
+          
+        }
+        .imag{
+          width: 100%;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:768px) and (max-width:1025px) {
+  .course{
+
+    .c-head{
+
+      .c-part1{
+        height: 90%;
+
+
+        .c-content{
+          .textarea{
+          // margin-top: 20vh;
+
+          h1{
+            font-size: 2vw;
+          }
+          .info{
+            font-size: 1.3vw;
+          }
+
+          
+        }
+        }
+        .imag{
+          width: 100%;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:1440px) and (max-width:2561px){
+  .course{
+
+    .c-head{
+
+      .c-part1{
+        height: 80%;
+
+        .c-content{
+          .textarea{
+          // margin-top: 20vh;
+            p{
+              font-size: 1vw;
+            }
+            h1{
+              font-size: 2.5vw;
+            }
+            .info{
+              font-size: 1.2vw;
+            }
+            .enroll{
+              width: 30%;
+              height: 15%;
+              font-size: 1.4vw;
+            }
+
+          
+          }
+        }
+        
+      }
+    }
   }
 }
