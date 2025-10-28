@@ -190,7 +190,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .project{
 
     .carousel-section-p{
@@ -201,7 +201,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         .carousel-track-p{
 
           .card-p{
-            height: 400px;
+            height: 370px;
             width: 400px;
             max-width: 95%;
 
@@ -217,17 +217,17 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
                 height: 15%;
                 .circle{
                   width:15%;
-                  font-size: 4vw;
+                  font-size: 3vw;
                 }
               }
             }
             .head-p{
-              font-size: 4vw;
+              font-size: 3vw;
             }
             .cont-p{
 
               li{
-                font-size: 2.5vw;
+                font-size: 2vw;
               }
             }
           }
@@ -280,7 +280,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
                 }
               }
               .number{
-                height: 15%;
+                height: 18%;
                 .circle{
                   width:15%;
                   font-size: 4vw;
@@ -293,7 +293,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             .cont-p{
 
               li{
-                font-size: 3.9vw;
+                font-size: 3.5vw;
               }
             }
           }
@@ -302,54 +302,10 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
   }
 }
-@media (min-width:768px) {
-  .project{
-
-    .carousel-section-p{
-
-      .carousel-container-p{
-        margin-top: 10vh;
-
-        .carousel-track-p{
-
-          .card-p{
-            height: 400px;
-            width: 400px;
-            max-width: 95%;
-
-            &:hover {
-              box-shadow: 0 0 10px 5px #00246B85;
-              transform: translateY(-5px);
-            }
 
 
-            
-            .card-content-p{
-              .number{
-                height: 15%;
-                .circle{
-                  width:15%;
-                  font-size: 2vw;
-                }
-              }
-            }
-            .head-p{
-              font-size: 2vw;
-            }
-            .cont-p{
-
-              li{
-                font-size: 1.3vw;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media (min-width:1920px){
-  .project{
+@media screen and (max-width:320px) {
+    .project{
 
     .carousel-section-p{
 
@@ -371,8 +327,8 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         .carousel-track-p{
 
           .card-p{
-            height: 550px;
-            width: 500px;
+            height: 300px;
+            width: 450px;
             max-width: 95%;
 
             &:hover {
@@ -391,21 +347,21 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
                 }
               }
               .number{
-                height: 15%;
+                height: 19%;
                 .circle{
                   width:18%;
-                  font-size: 3vw;
+                  font-size: 6vw;
                 }
               }
             }
             .head-p{
-              font-size: 2vw;
+              font-size: 5vw;
               font-weight: 700;
             }
             .cont-p{
 
               li{
-                font-size: 1.3vw;
+                font-size: 3.3vw;
               }
             }
           }
@@ -413,4 +369,125 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
     }
   }
+}
+
+@media (min-width:768px) and (max-width: 1024px) {
+  .project{
+
+    .carousel-section-p{
+
+      .carousel-container-p{
+        margin-top: 20vh;
+
+        .carousel-track-p{
+
+          .card-p{
+            height: 370px; 
+            width: 400px;
+            max-width: 450px; 
+
+            .card-content-p{
+              .number{
+                height: 15%;
+                .circle{
+                  width:12%;
+                  font-size: 2.5vw;
+                }
+              }
+            }
+            .head-p{
+              font-size: 2.5vw;
+            }
+            .cont-p{
+
+              li{
+                font-size: 1.8vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+@media (min-width:1025px) and (max-width: 1440px) {
+  .project{
+
+    .carousel-section-p{
+
+      .carousel-container-p{
+        margin-top: 20vh;
+
+        .carousel-track-p{
+
+          .card-p{
+            height: 390px; 
+            width: 400px;
+            max-width: 480px; 
+
+            .card-content-p{
+              .number{
+                height: 15%;
+                .circle{
+                  width:13%;
+                  font-size: 2vw;
+                }
+              }
+            }
+            .head-p{
+              font-size: 1.7vw;
+            }
+            .cont-p{
+
+              li{
+                font-size: 1vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+@media (min-width:1441px) and (max-width: 2560px) {
+  .project{
+
+    .carousel-section-p{
+
+      .carousel-container-p{
+        margin-top: 20vh;
+
+        .carousel-track-p{
+
+          .card-p{
+            height: 600px; 
+            width: 800px;
+            max-width: 500px; 
+
+            .card-content-p{
+              .number{
+                height: 15%;
+                .circle{
+                  width:17%;
+                  font-size: 1.8vw;
+                }
+              }
+            }
+            .head-p{
+              font-size: 1.5vw;
+            }
+            .cont-p{
+
+              li{
+                font-size: 1vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

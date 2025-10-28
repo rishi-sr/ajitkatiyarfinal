@@ -181,7 +181,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             
             .card-content{
               .icon{
-                font-size: 30vw;
+                font-size: 20vw;
               }
               .title{
                 font-size: 8vw;
@@ -205,7 +205,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         .carousel-track{
 
           .card{
-            height: 400px;
+            height: 370px;
             width: 400px;
             max-width: 95%;
 
@@ -231,7 +231,7 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
   }
 }
-@media screen and (min-width:1920px) {
+@media screen and (max-width:1024px) {
   .specialize{
 
     .carousel-section{
@@ -251,8 +251,8 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         .carousel-track{
 
           .card{
-            height: 550px;
-            width: 500px;
+            height: 360px;
+            width: 400px;
             max-width: 95%;
 
             &:hover {
@@ -264,10 +264,114 @@ $shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             
             .card-content{
               .icon{
-                font-size: 10vw;
+                font-size: 6vw;
               }
               .title{
-                font-size: 3vw;
+                font-size: 2vw;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:321px){
+    .specialize{
+
+    .carousel-section{
+
+      .carousel-container{
+        margin-top: 10vh;
+
+        .carousel-track{
+
+          .card{
+            height: 300px;
+            width: 350px;
+            max-width: 95%;
+
+            &:hover {
+              box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.286);
+              transform: translateY(-5px);
+            }
+
+            
+              .card-content{
+                .icon{
+                  font-size: 20vw;
+                }
+              }
+            
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width:1440px) and (max-width:2560px) {
+  .specialize{
+
+    .carousel-section{
+
+      .carousel-container{
+        margin-top: 10vh;
+
+        .carousel-track{
+
+          .card{
+            height: 650px;
+            width: 700px;
+            max-width: 95%;
+
+            &:hover {
+              box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.286);
+              transform: translateY(-5px);
+            }
+      
+            .card-content{
+              .icon{
+                font-size: 5vw;
+              }
+              .title{
+                font-size: 2vw;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width:1240px) and (max-width:1440px) {
+  .specialize{
+
+    .carousel-section{
+
+      .carousel-container{
+        margin-top: 10vh;
+
+        .carousel-track{
+
+          .card{
+            height: 370px;
+            width: 400px;
+            max-width: 95%;
+
+            &:hover {
+              box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.286);
+              transform: translateY(-5px);
+            }
+      
+            .card-content{
+              .icon{
+                font-size: 8vw;
+              }
+              .title{
+                font-size: 2.5vw;
                 text-align: center;
               }
             }

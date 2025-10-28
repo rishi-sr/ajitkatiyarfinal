@@ -115,6 +115,7 @@
     padding-top: 10vh;
 
     .cards-d {
+      
       .demhead {
         font-size: 1.5rem;
       }
@@ -133,6 +134,37 @@
 
           p {
             font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:1440px) and (max-width: 2560px) {
+  .benefits {
+    padding-top: 10vh;
+
+    .cards-d {
+      width: 100%;
+      
+      .demhead {
+        font-size: 1.5rem;
+      }
+
+      .row {
+        gap: 20px;
+
+        .card {
+          height: 400px;
+          width:300px;
+
+          .icon {
+            font-size: 7rem;
+          }
+
+          p {
+            font-size: 2rem;
           }
         }
       }
