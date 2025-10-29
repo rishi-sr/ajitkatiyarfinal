@@ -233,7 +233,7 @@
     
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .thumb {
     flex-direction: column;
     height: auto;
@@ -342,7 +342,7 @@
     }
   }
 }
-@media screen and (max-width:1024px) {
+@media (min-width:768px) and (max-width:1024px) {
   .thumb{
     .bg{
       left: -500px;
