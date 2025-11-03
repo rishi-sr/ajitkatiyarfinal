@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { send } from '@emailjs/browser';
 import NewNav from '../newnav/NewNav';
 import './consult.scss';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
-import Footer from '../footer/Footer';
 
 const icons = [
   { icon: <FaTwitter />, link: "https://twitter.com" },
@@ -16,9 +16,11 @@ const ConsultMe = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    number: '',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value});
@@ -26,8 +28,22 @@ const ConsultMe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    setSubmitted(true);
+
+    const serviceId = "service_tc88vlc";
+    const templateId = "template_lyj2bf6";
+    const publicKey = "WQEe_uuHdWxHxv5JH";
+
+    send(serviceId, templateId, formData, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSubmitted(true);
+        setError('');
+        setFormData({ name: '', email: '', number: '', message: '' });
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+        setError('Failed to send message. Please try again later.');
+      });
   };
 
   return (
@@ -60,18 +76,30 @@ const ConsultMe = () => {
                   onChange={handleChange}
                   required
                 />
+                <input
+                  type="number"
+                  name="number"
+                  placeholder="Phone Number"
+                  value={formData.number}
+                  onChange={handleChange}
+                  maxLength={10}
+                  pattern="\d{10}"
+                  required
+                />
                 <textarea
                   name="message"
                   rows="5"
-                  placeholder="Your Message"
+                  placeholder="Consult Me Regarding the Course"
                   value={formData.message}
                   onChange={handleChange}
                   required
                 ></textarea>
                 <button type="submit">Submit</button>
+                {error && <p className="error">{error}</p>}
               </form>
             )}
           </div>
+
           <div className="consultdet">
             <div className="logo-c">
               <div className="img">
@@ -91,7 +119,6 @@ const ConsultMe = () => {
           </div>
         </div>
       </div>
-      
     </>
   );
 };
