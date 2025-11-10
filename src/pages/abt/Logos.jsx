@@ -1,9 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './logo.scss';
 
 const Logos = () => {
+  const logos = [
+    "1.png", "2.png", "3.png", "4.png",
+    "5.png", "6.png", "7.png", "8.png"
+  ];
 
-
+  // Duplicate the logos once for seamless looping
+  const allLogos = [...logos, ...logos];
 
   return (
     <div className="container">
@@ -11,14 +16,11 @@ const Logos = () => {
         <div className="wrapper">
           <div className="carousel-mask">
             <ul className="carousel">
-              <li><img src="1.png" alt="Facebook" /></li>
-              <li><img src="2.png" alt="Disney" /></li>
-              <li><img src="3.png" alt="Airbnb" /></li>
-              <li><img src="4.png" alt="Apple" /></li>
-              <li><img src="5.png" alt="Spark" /></li>
-              <li><img src="6.png" alt="Samsung" /></li>
-              <li><img src="7.png" alt="Quora" /></li>
-              <li><img src="8.png" alt="Sass" /></li>
+              {allLogos.map((logo, i) => (
+                <li key={i}>
+                  <img src={logo} alt={`Logo ${i + 1}`} />
+                </li>
+              ))}
             </ul>
           </div>
         </div>

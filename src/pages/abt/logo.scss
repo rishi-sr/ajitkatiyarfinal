@@ -1,7 +1,6 @@
 .container {
   position: relative;
   margin-top: 92vh;
-  // background: radial-gradient(circle at center, #2e0854 0%, #1a0b2e 50%, #000000 100%);
 
   .main {
     min-height: 20vh;
@@ -19,19 +18,24 @@
       .carousel-mask {
         width: 100%;
         overflow: hidden;
-        mask-image: linear-gradient(to right, transparent 0, black 100px, black calc(100% - 100px), transparent 100%);
+        mask-image: linear-gradient(
+          to right,
+          transparent 0,
+          black 100px,
+          black calc(100% - 100px),
+          transparent 100%
+        );
 
         .carousel {
           display: flex;
-          animation: infinite-scroll 20s linear infinite;
-          gap: 20px;
+          gap: 40px;
+          animation: scroll-loop 25s linear infinite;
+          width: max-content;
 
           li {
-            margin: 0 1rem;
             list-style: none;
 
             img {
-              max-width: none;
               width: 100px;
               height: 100px;
               object-fit: contain;
@@ -43,32 +47,22 @@
   }
 }
 
-@keyframes infinite-scroll {
+@keyframes scroll-loop {
   0% {
-    transform: translateX(90%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-90%);
+    transform: translateX(-50%);
   }
 }
 
+/* Responsive scaling */
 @media screen and (max-width: 1024px) {
   .container {
     margin-top: 90vh;
-
-    .main {
-      .wrapper {
-        .carousel-mask {
-          .carousel {
-            li {
-              img {
-                width: 80px;
-                height: 80px;
-              }
-            }
-          }
-        }
-      }
+    .carousel li img {
+      width: 80px;
+      height: 80px;
     }
   }
 }
@@ -76,20 +70,9 @@
 @media screen and (max-width: 768px) {
   .container {
     margin-top: 90vh;
-
-    .main {
-      .wrapper {
-        .carousel-mask {
-          .carousel {
-            li {
-              img {
-                width: 60px;
-                height: 60px;
-              }
-            }
-          }
-        }
-      }
+    .carousel li img {
+      width: 60px;
+      height: 60px;
     }
   }
 }
@@ -97,20 +80,9 @@
 @media screen and (max-width: 480px) {
   .container {
     margin-top: 90vh;
-
-    .main {
-      .wrapper {
-        .carousel-mask {
-          .carousel {
-            li {
-              img {
-                width: 50px;
-                height: 50px;
-              }
-            }
-          }
-        }
-      }
+    .carousel li img {
+      width: 50px;
+      height: 50px;
     }
   }
 }
