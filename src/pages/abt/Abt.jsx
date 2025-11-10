@@ -10,9 +10,7 @@ import Projects from '../proj/Projects';
 import Cert from '../certificates/Cert';
 const social = [
   { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/ajit-kumar-7a303713/" },
-  { icon: <FaTwitter />, url: "https://twitter.com/yourusername" },
   { icon: <FaGithub />, url: "https://github.com/ds007kumar" },
-  { icon: <SiGooglescholar />, url: "https://scholar.google.com/citations?user=yourid" },
 ];
 
 const Abt = () => {

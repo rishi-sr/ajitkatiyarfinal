@@ -5,6 +5,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import Section from './Section';
 import Footer from '../footer/Footer';
 import Durationc from './Durationc';
+import { Link } from 'react-router-dom';
 import Special from './Special';
 const Courses = () => {
     const stars = Array.from({ length: 20 });
@@ -33,7 +34,7 @@ const Courses = () => {
                     <p className='info'>
                         This program covers essential topics for building expertise in machine learning and AI. It starts with foundational mathematics like linear algebra and calculus, along with Python programming and data manipulation using libraries like NumPy and Pandas. Next, it dives into machine learning algorithms, feature engineering, and model validation using tools such as Scikit-learn and XGBoost. Advanced topics include deep learning with CNNs, RNNs, and frameworks like TensorFlow and PyTorch. It also explores generative AI, transformer models, and vector databases for semantic search. Finally, the course teaches MLOps practices including model versioning, CI/CD, monitoring, and deployment using Docker and Kubernetes.
                     </p>
-                    <button className="enroll"><span>Get Enrolled</span></button>
+                    <Link to="/enroll"><button className="enroll"><span>Get Enrolled</span></button></Link>
                 </div>
             </div>
             <div className="imag">

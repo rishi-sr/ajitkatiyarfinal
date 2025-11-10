@@ -14,6 +14,7 @@ import Specialization from './pages/specialization/Specialization';
 import Home from './Home';
 import Courses from './pages/courses/Courses';
 import ConsultMe from './pages/consult/ConsultMe';
+import Enroll from './pages/enroll/Enroll';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about" element={<Abt />} />
         <Route path="/course" element={<Courses/>} />
         <Route path="/consultme" element={<ConsultMe/>} />
+        <Route path="/enroll" element={<Enroll/>} />
       </Routes>
     </Router>
     
