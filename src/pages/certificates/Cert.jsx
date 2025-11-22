@@ -1,6 +1,7 @@
 import React from "react";
 import "./cert.scss";
 import { ImArrowUpRight2 } from "react-icons/im";
+import { image } from "framer-motion/client";
 
 const certificates = [
   {
@@ -33,7 +34,38 @@ const certificates = [
     image: "cert6.jpg",
     url: "https://graphacademy.neo4j.com/c/fb480b80-92de-419c-a978-ba5195cc9be4/",
   },
+
 ];
+const certimg=[
+  {
+    id: 1,
+    image: "cert7.jpg",
+  },
+  {
+    id: 2,
+    image: "cert8.jpg",
+  },
+  {
+    id: 3,
+    image: "cert9.jpg",
+  },
+  {
+    id: 4,
+    image: "cert10.jpg",
+  },
+  {
+    id: 5,
+    image: "cert11.jpg",
+  },
+  {
+    id: 6,
+    image: "cert12.jpg",
+  },
+  {
+    id:7,
+    image:"cert13.jpg",
+  }
+]
 
 const Cert = () => {
   return (
@@ -51,6 +83,19 @@ const Cert = () => {
                   <a href={cert.url} target="_blank" rel="noopener noreferrer" className="iconBox">
                     <ImArrowUpRight2 className="cert-icon" />
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="certimg">
+        {certimg.map((cert) => (
+          <div className="card" key={cert.id}>
+            <div className="card-inner" style={{ "--clr": "#190a2c" }}>
+              <div className="box">
+                <div className="imgBox">
+                  <img src={cert.image} alt={`Certificate ${cert.id}`} />
                 </div>
               </div>
             </div>
