@@ -195,6 +195,31 @@
    @media (max-width: 480px) {
      width: 95%;
      padding: 2rem 0.5rem;
+
+    //  .certimg{
+    //   display: block;
+    //   overflow: hidden;
+    //   .card{
+    //     width: 100%;
+    //     height: 20%;
+    //     .card-inner{
+    //       height: 300px;
+    //       width: 200px;
+    //       .box{
+    //         height: 300px;
+    //         width: 200px;
+    //         .imgbox{
+    //           height: 100%;
+    //           width: 100%;
+    //           img{
+    //             width: 100%;
+    //             height: 100%;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    //  }
      .container {
        grid-template-columns: 1fr;
        gap: 1.2rem;
