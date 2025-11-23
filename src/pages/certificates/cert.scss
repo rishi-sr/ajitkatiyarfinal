@@ -160,6 +160,14 @@
      .card-inner {
        height: 16rem;
      }
+
+     .certimg{
+      height: 150vh;
+      
+      .card{
+        width: 30%;
+      }
+     }
    }
   
    /* Mobile Landscape (≤ 768px) */
@@ -214,5 +222,7 @@
      .icon a {
        font-size: 1.6rem !important;
      }
+
+     
    }
 }
