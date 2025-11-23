@@ -1,6 +1,7 @@
 .container {
   position: relative;
   margin-top: 92vh;
+  z-index: 10;
 
   .main {
     min-height: 20vh;

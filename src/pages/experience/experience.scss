@@ -6,6 +6,8 @@ $primary: #2e0854;
   margin-bottom: 2rem;
   font-family: 'syne';
   color: white;
+  z-index: 10;
+
 }
 
 
@@ -17,6 +19,7 @@ $primary: #2e0854;
   // background: radial-gradient(circle at center, #2e0854 0%, #1a0b2e 50%, #000000 100%);
   flex-direction: column;
   color: #2e0854;
+  z-index: 10;
 
   
 }
@@ -27,6 +30,7 @@ $primary: #2e0854;
   margin: 0 auto;
   padding: 2em 0;
   list-style-type: none;
+  z-index: 10;
 
   &:before {
     content: '';
